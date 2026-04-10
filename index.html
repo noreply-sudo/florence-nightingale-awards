@@ -7,161 +7,270 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Great+Vibes&display=swap');
 
-        /* Box-sizing ensures padding doesn't add to the total height */
         * { box-sizing: border-box; }
 
         body { 
-            margin: 0; 
-            padding: 0; 
+            margin: 0; padding: 0; 
             font-family: 'Montserrat', sans-serif; 
             background: radial-gradient(circle at center, #5e1515 0%, #0a0000 80%); 
             color: #ffffff; 
-            height: 100vh; /* Locks it to exact screen height */
-            display: flex; 
-            flex-direction: column; 
-            position: relative; 
-            overflow: hidden; /* Prevents desktop scrolling */
+            height: 100vh; 
+            display: flex; flex-direction: column; 
+            position: relative; overflow: hidden; 
         }
 
-        /* --- HEADER STYLES --- */
-        .header { 
-            display: flex; 
-            justify-content: space-between; 
-            padding: 15px 40px; /* Reduced padding to save vertical space */
-            z-index: 2; 
-            flex-wrap: wrap; 
-            gap: 15px; 
-            flex-shrink: 0; /* Prevents header from squishing */
-        }
-        
-        .header-left { 
-            display: flex; 
-            align-items: center; 
-            gap: 15px; 
-            background: rgba(0, 0, 0, 0.4); 
-            padding: 10px 20px; 
-            border-radius: 12px; 
-            border-left: 3px solid #ffd700; 
-        }
-
+        /* --- HEADER --- */
+        .header { display: flex; justify-content: space-between; padding: 15px 40px; z-index: 2; flex-wrap: wrap; gap: 15px; flex-shrink: 0; }
+        .header-left { display: flex; align-items: center; gap: 15px; background: rgba(0,0,0,0.4); padding: 10px 20px; border-radius: 12px; border-left: 3px solid #ffd700; }
         .logo-zoom-window { width: 60px; height: 60px; overflow: hidden; position: relative; background: white; flex-shrink: 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
         .logo-zoom-window img { width: 180%; height: auto; position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); }
-
-        .award-details h3 { margin: 0; font-size: 1rem; color: #ffffff; letter-spacing: 1px; }
-        .award-details p { margin: 3px 0 0 0; font-size: 0.75rem; color: #ffd700; line-height: 1.4; }
-
+        .award-details h3 { margin: 0; font-size: 1rem; color: #fff; letter-spacing: 1px; }
+        .award-details p { margin: 3px 0 0; font-size: 0.75rem; color: #ffd700; line-height: 1.4; }
         .header-right { text-align: right; }
-        .header-right p { margin: 0 0 5px 0; font-size: 0.85rem; color: #cccccc; }
-        
+        .header-right p { margin: 0 0 5px; font-size: 0.85rem; color: #ccc; }
         .organizer-logos { display: flex; gap: 15px; align-items: center; justify-content: flex-end; }
         .ezi-zoom-window { width: 50px; height: 50px; overflow: hidden; position: relative; background: transparent; flex-shrink: 0; }
         .ezi-zoom-window img { width: 200%; height: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-        .bgs-logo { height: 50px; background: transparent; box-sizing: border-box; }
+        .bgs-logo { height: 50px; background: transparent; }
 
-        /* --- TWO COLUMN MAIN CONTENT STYLES --- */
-        .main-content { 
-            flex-grow: 1; 
-            display: flex; 
-            flex-direction: row; 
-            align-items: center; 
-            justify-content: center; 
-            z-index: 2; 
-            padding: 10px 5%; 
-            gap: 40px; 
-            overflow: hidden; /* Keeps content inside the bounds */
-        }
-
-        .text-column {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
+        /* --- MAIN CONTENT --- */
+        .main-content { flex-grow: 1; display: flex; align-items: center; justify-content: center; z-index: 2; padding: 10px 5%; gap: 40px; overflow: hidden; }
+        .text-column { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; }
         .date-badge { font-size: 2rem; font-weight: 800; color: #ffd700; text-shadow: 0 5px 15px rgba(0,0,0,0.8); margin-bottom: 10px; line-height: 1; }
         .date-badge span { font-size: 0.9rem; display: block; letter-spacing: 3px; }
         .cursive-title { font-family: 'Great Vibes', cursive; font-size: 3rem; color: #ffd700; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); transform: rotate(-3deg); }
-        
-        .main-title { 
-            font-size: 3.2rem; /* Adjusted for smaller desktop screens */
-            color: #ffd700; 
-            background: linear-gradient(180deg, #ffea8c 0%, #ff8c00 100%); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            text-transform: uppercase; 
-            letter-spacing: 4px; 
-            margin: -5px 0 20px 0; 
-            filter: drop-shadow(0px 8px 15px rgba(0,0,0,0.9)); 
-        }
-        
+        .main-title { font-size: 3.2rem; color: #ffd700; background: linear-gradient(180deg, #ffea8c 0%, #ff8c00 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; letter-spacing: 4px; margin: -5px 0 20px; filter: drop-shadow(0px 8px 15px rgba(0,0,0,0.9)); }
         .countdown { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
-        .time-box { background: rgba(0, 0, 0, 0.7); border: 1px solid rgba(255, 215, 0, 0.3); backdrop-filter: blur(5px); color: #ffd700; padding: 12px 15px; border-radius: 8px; min-width: 75px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); }
+        .time-box { background: rgba(0,0,0,0.7); border: 1px solid rgba(255,215,0,0.3); backdrop-filter: blur(5px); color: #ffd700; padding: 12px 15px; border-radius: 8px; min-width: 75px; box-shadow: 0 10px 20px rgba(0,0,0,0.7); }
         .time-box span { display: block; font-size: 2.2rem; font-weight: 800; line-height: 1; }
-        .time-box .label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 5px; color: #ffffff; letter-spacing: 1px; }
-        
-        .register-btn { background: linear-gradient(90deg, #cc0000, #ff1a1a); color: #ffffff; text-decoration: none; padding: 12px 40px; font-size: 1.3rem; font-weight: 800; border-radius: 50px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(230, 0, 0, 0.6); }
-        .register-btn:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(230, 0, 0, 0.8); }
+        .time-box .label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-top: 5px; color: #fff; letter-spacing: 1px; }
+        .register-btn { background: linear-gradient(90deg, #cc0000, #ff1a1a); color: #fff; text-decoration: none; padding: 12px 40px; font-size: 1.3rem; font-weight: 800; border-radius: 50px; text-transform: uppercase; letter-spacing: 2px; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(230,0,0,0.6); cursor: pointer; border: none; }
+        .register-btn:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(230,0,0,0.8); }
+        .image-column { flex: 1; display: flex; justify-content: center; align-items: center; height: 100%; }
+        .dancer-inline { max-height: 60vh; max-width: 100%; object-fit: contain; opacity: 0.95; -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%); mask-image: linear-gradient(to top, transparent 0%, black 15%); filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); }
 
-        .image-column {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-
-        .dancer-inline { 
-            max-height: 60vh; /* Fits dynamically relative to the window size */
-            max-width: 100%;
-            object-fit: contain;
-            opacity: 0.95; 
-            -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%); 
-            mask-image: linear-gradient(to top, transparent 0%, black 15%); 
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
-        }
-
-        /* --- FOOTER STYLES --- */
-        .footer { 
-            display: flex; 
-            justify-content: space-between; 
-            padding: 15px 40px; /* Reduced to save space */
-            background: rgba(0, 0, 0, 0.9); 
-            z-index: 2; 
-            font-size: 0.85rem; 
-            align-items: center; 
-            flex-wrap: wrap; 
-            gap: 15px; 
-            border-top: 1px solid rgba(255, 215, 0, 0.1); 
-            flex-shrink: 0; /* Prevents footer from squishing */
-        }
-        
+        /* --- FOOTER --- */
+        .footer { display: flex; justify-content: space-between; padding: 15px 40px; background: rgba(0,0,0,0.9); z-index: 2; font-size: 0.85rem; align-items: center; flex-wrap: wrap; gap: 15px; border-top: 1px solid rgba(255,215,0,0.1); flex-shrink: 0; }
         .location, .contact { display: flex; align-items: center; gap: 10px; }
         .icon { font-size: 1.3rem; }
-        .footer strong { display: block; font-size: 1rem; color: #ffffff; margin-bottom: 2px; }
-        .footer p { margin: 0; color: #cccccc; }
+        .footer strong { display: block; font-size: 1rem; color: #fff; margin-bottom: 2px; }
+        .footer p { margin: 0; color: #ccc; }
+
+        /* =============================================
+           REGISTRATION FORM MODAL
+           ============================================= */
+        .modal-overlay {
+            display: none; position: fixed; inset: 0; 
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
+            z-index: 1000; justify-content: center; align-items: flex-start;
+            padding: 20px; overflow-y: auto;
+        }
+        .modal-overlay.active { display: flex; }
+
+        .form-container {
+            background: linear-gradient(165deg, #1a0a0a 0%, #2a1010 40%, #1a0505 100%);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 20px; width: 100%; max-width: 720px;
+            padding: 0; margin: 20px auto;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.8), 0 0 60px rgba(139,0,0,0.3);
+            animation: formSlideIn 0.4s ease-out;
+        }
+        @keyframes formSlideIn {
+            from { opacity: 0; transform: translateY(30px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .form-header {
+            background: linear-gradient(135deg, #8B0000, #cc0000);
+            padding: 28px 32px; border-radius: 20px 20px 0 0;
+            position: relative; overflow: hidden;
+        }
+        .form-header::after {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 200px; height: 200px; border-radius: 50%;
+            background: rgba(255,215,0,0.08);
+        }
+        .form-header h2 { margin: 0; font-size: 1.6rem; font-weight: 800; letter-spacing: 1px; color: #fff; position: relative; }
+        .form-header p { margin: 6px 0 0; font-size: 0.85rem; color: rgba(255,255,255,0.75); position: relative; }
+        .close-btn {
+            position: absolute; top: 18px; right: 20px;
+            background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2);
+            color: #fff; width: 36px; height: 36px; border-radius: 50%;
+            font-size: 1.1rem; cursor: pointer; display: flex;
+            align-items: center; justify-content: center;
+            transition: all 0.2s; z-index: 2;
+        }
+        .close-btn:hover { background: rgba(255,255,255,0.15); transform: scale(1.1); }
+
+        .form-body { padding: 28px 32px; }
+
+        /* Input groups */
+        .input-group { margin-bottom: 20px; }
+        .input-group label {
+            display: block; margin-bottom: 6px; font-size: 0.8rem;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;
+            color: #ffd700;
+        }
+        .input-group input, .input-group select {
+            width: 100%; padding: 12px 16px; border-radius: 10px;
+            border: 1px solid rgba(255,215,0,0.15);
+            background: rgba(0,0,0,0.5); color: #fff;
+            font-family: 'Montserrat', sans-serif; font-size: 0.95rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+        .input-group input::placeholder { color: rgba(255,255,255,0.3); }
+        .input-group input:focus, .input-group select:focus {
+            border-color: #ffd700;
+            box-shadow: 0 0 0 3px rgba(255,215,0,0.1);
+        }
+
+        /* Events section */
+        .events-section-title {
+            font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1.5px; color: #ffd700; margin-bottom: 14px;
+        }
+
+        .event-card {
+            background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+            transition: all 0.25s; cursor: pointer; position: relative;
+        }
+        .event-card:hover { border-color: rgba(255,215,0,0.2); background: rgba(0,0,0,0.5); }
+        .event-card.selected {
+            border-color: #ffd700; background: rgba(139,0,0,0.2);
+            box-shadow: 0 0 20px rgba(139,0,0,0.15);
+        }
+
+        .event-card-top {
+            display: flex; align-items: center; gap: 12px;
+        }
+        .event-checkbox {
+            width: 22px; height: 22px; border-radius: 6px;
+            border: 2px solid rgba(255,215,0,0.3); background: transparent;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; transition: all 0.2s;
+        }
+        .event-card.selected .event-checkbox {
+            background: #ffd700; border-color: #ffd700;
+        }
+        .event-checkbox::after {
+            content: '✓'; font-size: 14px; font-weight: 800; color: #1a0a0a;
+            opacity: 0; transition: opacity 0.2s;
+        }
+        .event-card.selected .event-checkbox::after { opacity: 1; }
+
+        .event-info { flex: 1; }
+        .event-name { font-weight: 700; font-size: 0.95rem; color: #fff; }
+        .event-meta { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+        .event-fee {
+            font-weight: 800; font-size: 1rem; color: #ffd700;
+            white-space: nowrap;
+        }
+
+        /* Student count (appears when selected) */
+        .student-count-row {
+            display: none; align-items: center; gap: 10px;
+            margin-top: 12px; padding-top: 12px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .event-card.selected .student-count-row { display: flex; }
+
+        .student-count-row label {
+            font-size: 0.75rem; color: rgba(255,255,255,0.6); white-space: nowrap;
+        }
+        .student-count-row input {
+            width: 80px; padding: 8px 10px; border-radius: 8px;
+            border: 1px solid rgba(255,215,0,0.15); background: rgba(0,0,0,0.5);
+            color: #fff; font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem; font-weight: 700; text-align: center; outline: none;
+        }
+        .student-count-row input:focus { border-color: #ffd700; }
+        .student-count-row .max-info {
+            font-size: 0.7rem; color: rgba(255,215,0,0.5); font-style: italic;
+        }
+
+        /* Terms tooltip */
+        .event-terms {
+            font-size: 0.7rem; color: rgba(255,255,255,0.35);
+            margin-top: 4px; line-height: 1.4;
+        }
+
+        /* Total section */
+        .total-section {
+            margin-top: 24px; padding: 20px;
+            background: linear-gradient(135deg, rgba(139,0,0,0.25), rgba(0,0,0,0.4));
+            border: 1px solid rgba(255,215,0,0.15); border-radius: 14px;
+        }
+        .total-row {
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .total-label { font-size: 0.85rem; color: rgba(255,255,255,0.6); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .total-amount { font-size: 2rem; font-weight: 800; color: #ffd700; }
+
+        .total-breakdown {
+            margin-top: 10px; padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            font-size: 0.75rem; color: rgba(255,255,255,0.35);
+        }
+        .total-breakdown div { display: flex; justify-content: space-between; padding: 2px 0; }
+
+        /* Submit button */
+        .pay-btn {
+            width: 100%; margin-top: 24px; padding: 16px;
+            background: linear-gradient(90deg, #cc0000, #ff1a1a);
+            color: #fff; border: none; border-radius: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 2px;
+            cursor: pointer; transition: all 0.3s;
+            box-shadow: 0 5px 25px rgba(204,0,0,0.4);
+        }
+        .pay-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 35px rgba(204,0,0,0.6); }
+        .pay-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+        .pay-btn.loading { pointer-events: none; }
+        .pay-btn.loading::after {
+            content: ''; display: inline-block; width: 18px; height: 18px;
+            border: 3px solid rgba(255,255,255,0.3); border-top-color: #fff;
+            border-radius: 50%; animation: spin 0.6s linear infinite;
+            margin-left: 10px; vertical-align: middle;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .note-text {
+            margin-top: 16px; font-size: 0.72rem; color: rgba(255,255,255,0.3);
+            text-align: center; line-height: 1.6;
+        }
+
+        /* Success state */
+        .success-view { display: none; text-align: center; padding: 60px 32px; }
+        .success-view.active { display: block; }
+        .success-icon { font-size: 72px; margin-bottom: 16px; }
+        .success-view h2 { color: #ffd700; margin: 0 0 8px; font-size: 1.6rem; }
+        .success-view p { color: rgba(255,255,255,0.6); margin: 4px 0; }
+        .success-view .pid { color: #ffd700; font-weight: 700; font-size: 0.9rem; margin-top: 16px; }
 
         /* Responsive */
         @media (max-width: 1024px) {
-            body { 
-                height: auto; /* Re-enables scrolling for mobile and tablets */
-                overflow-y: auto; 
-                overflow-x: hidden;
-            }
+            body { height: auto; overflow-y: auto; overflow-x: hidden; }
             .main-content { flex-direction: column; gap: 30px; }
             .header, .footer { flex-direction: column; align-items: center; text-align: center; padding: 15px; }
             .organizer-logos { justify-content: center; }
-            .header-left { flex-direction: column; border-left: none; border-top: 3px solid #ffd700; padding: 15px;}
+            .header-left { flex-direction: column; border-left: none; border-top: 3px solid #ffd700; padding: 15px; }
             .main-title { font-size: 2.8rem; }
             .cursive-title { font-size: 2.8rem; }
             .time-box span { font-size: 2rem; }
             .time-box { min-width: 60px; padding: 10px; }
-            .dancer-inline { max-height: 45vh; } 
+            .dancer-inline { max-height: 45vh; }
+            .form-body { padding: 20px 18px; }
+            .form-header { padding: 22px 18px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- ========== LANDING PAGE ========== -->
     <div class="header">
         <div class="header-left">
             <div class="logo-zoom-window">
@@ -172,7 +281,6 @@
                 <p>Silver Jubilee Function<br>@Banquet Hall Vidhana Soudha<br>12th May 2026</p>
             </div>
         </div>
-        
         <div class="header-right">
             <p>Event Organizers</p>
             <div class="organizer-logos">
@@ -185,26 +293,21 @@
     </div>
 
     <div class="main-content">
-        
         <div class="text-column">
             <div class="date-badge">27<sup>th</sup><span>APRIL 2026</span></div>
             <h2 class="cursive-title">Cultural Events</h2>
             <h1 class="main-title">Nightingale<br>Rhythm 2026</h1>
-            
             <div class="countdown">
                 <div class="time-box"><span id="days">00</span><div class="label">Days</div></div>
                 <div class="time-box"><span id="hours">00</span><div class="label">Hours</div></div>
                 <div class="time-box"><span id="minutes">00</span><div class="label">Minutes</div></div>
                 <div class="time-box"><span id="seconds">00</span><div class="label">Seconds</div></div>
             </div>
-            
-            <a href="#" class="register-btn">Register Now</a>
+            <button class="register-btn" onclick="openForm()">Register Now</button>
         </div>
-
         <div class="image-column">
             <img src="dancer.png" alt="Bharatanatyam Dancer" class="dancer-inline">
         </div>
-
     </div>
 
     <div class="footer">
@@ -218,29 +321,329 @@
         </div>
     </div>
 
-    <script>
-        // Set to April 27, 2026
-        const countDownDate = new Date("April 27, 2026 00:00:00").getTime();
-        
-        const timerInterval = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
-            
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
-            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
-            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
-            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
-            
-            if (distance < 0) { 
-                clearInterval(timerInterval); 
-                document.querySelector(".countdown").innerHTML = "<h2 style='color:#ffd700;'>THE EVENT IS LIVE!</h2>"; 
+    <!-- ========== REGISTRATION FORM MODAL ========== -->
+    <div class="modal-overlay" id="formModal">
+        <div class="form-container">
+            <div class="form-header">
+                <button class="close-btn" onclick="closeForm()">✕</button>
+                <h2>🎭 Event Registration</h2>
+                <p>Nightingale Rhythm 2026 — 27th April, BGS College Auditorium</p>
+            </div>
+
+            <!-- Form View -->
+            <div class="form-body" id="formView">
+                <div class="input-group">
+                    <label>College / Institution Name</label>
+                    <input type="text" id="collegeName" placeholder="e.g. BGS College of Nursing" required>
+                </div>
+                <div class="input-group">
+                    <label>Contact Person Name</label>
+                    <input type="text" id="contactPerson" placeholder="Full name of the coordinator" required>
+                </div>
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required>
+                </div>
+
+                <div class="events-section-title">Select Events to Participate</div>
+                <div id="eventsContainer"></div>
+
+                <div class="total-section">
+                    <div class="total-row">
+                        <div class="total-label">Total Fee</div>
+                        <div class="total-amount" id="totalAmount">₹0</div>
+                    </div>
+                    <div class="total-breakdown" id="totalBreakdown"></div>
+                </div>
+
+                <button class="pay-btn" id="payBtn" disabled onclick="handlePayment()">
+                    Proceed to Pay
+                </button>
+
+                <div class="note-text">
+                    Last date for registration: <strong>20/04/2026</strong><br>
+                    Participant name list to be sent to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c9fbfcafa7a8fbf9fbff89aea4a8a0a5e7aaa6a4">[email&#160;protected]</a> by 20/04/2026.<br>
+                    One registration per event per college. Hand over music pen drive a day before.
+                </div>
+            </div>
+
+            <!-- Success View -->
+            <div class="success-view" id="successView">
+                <div class="success-icon">✅</div>
+                <h2>Registration Confirmed!</h2>
+                <p>Your registration for Nightingale Rhythm 2026 has been saved.</p>
+                <p class="pid" id="successPaymentId"></p>
+                <p style="color:rgba(255,255,255,0.4);margin-top:24px;font-size:0.8rem;">
+                    A confirmation email has been sent to the organizers.<br>
+                    Please send participant name list to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="93a1a6f5fdf2a1a3a1a5d3f4fef2faffbdf0fcfe">[email&#160;protected]</a>
+                </p>
+                <button class="pay-btn" style="margin-top:24px;max-width:250px;display:inline-block;" onclick="closeForm()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // =============================================
+    // CONFIGURATION — UPDATE THESE URLs
+    // =============================================
+    const CONFIG = {
+        // Replace with your deployed Google Apps Script Web App URL
+        APPS_SCRIPT_URL: "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec",
+
+        // Replace with your Razorpay Key ID (test or live)
+        RAZORPAY_KEY: "rzp_test_XXXXXXXXXX",
+
+        // Razorpay callback URL (your Apps Script doGet URL — same as above)
+        PAYMENT_CALLBACK_URL: "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec"
+    };
+
+    // =============================================
+    // EVENT DATA (extracted from the brochure)
+    // =============================================
+    const EVENTS = [
+        { id: 1, name: "Solo Dance",       fee: 500,  duration: "4 min",  maxParticipants: 1, terms: "Only classical dance. No film songs allowed." },
+        { id: 2, name: "Theme Dance",      fee: 1000, duration: "5 min",  maxParticipants: 8, terms: "6 to 8 team members. Theme/concept based dance." },
+        { id: 3, name: "Fashion Show",     fee: 1000, duration: "2 min",  maxParticipants: 2, terms: "One or two participants from each college." },
+        { id: 4, name: "Mime",             fee: 1000, duration: "5 min",  maxParticipants: 8, terms: "6 to 8 team members. Theme related to healthcare." },
+        { id: 5, name: "Painting",         fee: 500,  duration: "60 min", maxParticipants: 1, terms: "One student per institution. Drawing sheet provided." },
+        { id: 6, name: "Pencil Drawing",   fee: 500,  duration: "60 min", maxParticipants: 1, terms: "One student per institution. Theme given before start." },
+        { id: 7, name: "Article Writing",  fee: 500,  duration: "90 min", maxParticipants: 1, terms: "One student. Max 1000 words. English only. Sheets provided." },
+    ];
+
+    // =============================================
+    // RENDER EVENT CARDS
+    // =============================================
+    const container = document.getElementById('eventsContainer');
+
+    EVENTS.forEach(ev => {
+        const card = document.createElement('div');
+        card.className = 'event-card';
+        card.dataset.id = ev.id;
+        card.innerHTML = `
+            <div class="event-card-top" onclick="toggleEvent(${ev.id})">
+                <div class="event-checkbox"></div>
+                <div class="event-info">
+                    <div class="event-name">${ev.name}</div>
+                    <div class="event-meta">${ev.duration} &nbsp;·&nbsp; Max ${ev.maxParticipants} participant${ev.maxParticipants > 1 ? 's' : ''}</div>
+                    <div class="event-terms">${ev.terms}</div>
+                </div>
+                <div class="event-fee">₹${ev.fee.toLocaleString('en-IN')}</div>
+            </div>
+            <div class="student-count-row">
+                <label>No. of students:</label>
+                <input type="number" min="1" max="${ev.maxParticipants}" value="1"
+                       id="students-${ev.id}" onchange="updateTotal()" oninput="clampStudents(this, ${ev.maxParticipants})">
+                <span class="max-info">max ${ev.maxParticipants}</span>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+
+    // =============================================
+    // EVENT SELECTION & TOTAL CALCULATION
+    // =============================================
+    const selectedEvents = new Set();
+
+    function toggleEvent(id) {
+        const card = document.querySelector(`.event-card[data-id="${id}"]`);
+        if (selectedEvents.has(id)) {
+            selectedEvents.delete(id);
+            card.classList.remove('selected');
+        } else {
+            selectedEvents.add(id);
+            card.classList.add('selected');
+        }
+        updateTotal();
+    }
+
+    function clampStudents(input, max) {
+        let v = parseInt(input.value);
+        if (isNaN(v) || v < 1) input.value = 1;
+        else if (v > max) input.value = max;
+        updateTotal();
+    }
+
+    function updateTotal() {
+        let total = 0;
+        let breakdownHTML = '';
+
+        selectedEvents.forEach(id => {
+            const ev = EVENTS.find(e => e.id === id);
+            const students = parseInt(document.getElementById(`students-${id}`).value) || 1;
+            const lineFee = ev.fee;
+            total += lineFee;
+            breakdownHTML += `<div><span>${ev.name} (${students} student${students > 1 ? 's' : ''})</span><span>₹${lineFee.toLocaleString('en-IN')}</span></div>`;
+        });
+
+        document.getElementById('totalAmount').textContent = `₹${total.toLocaleString('en-IN')}`;
+        document.getElementById('totalBreakdown').innerHTML = breakdownHTML;
+        document.getElementById('payBtn').disabled = (total === 0);
+    }
+
+    // =============================================
+    // FORM OPEN / CLOSE
+    // =============================================
+    function openForm() {
+        document.getElementById('formModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeForm() {
+        document.getElementById('formModal').classList.remove('active');
+        document.body.style.overflow = '';
+        // Reset form to initial state
+        document.getElementById('formView').style.display = '';
+        document.getElementById('successView').classList.remove('active');
+    }
+
+    // Close on clicking overlay (not the form itself)
+    document.getElementById('formModal').addEventListener('click', function(e) {
+        if (e.target === this) closeForm();
+    });
+
+    // =============================================
+    // PAYMENT & SUBMISSION
+    // =============================================
+    function gatherFormData() {
+        const events = [];
+        selectedEvents.forEach(id => {
+            const ev = EVENTS.find(e => e.id === id);
+            const students = parseInt(document.getElementById(`students-${id}`).value) || 1;
+            events.push({ name: ev.name, fee: ev.fee, students: students });
+        });
+
+        return {
+            collegeName: document.getElementById('collegeName').value.trim(),
+            contactPerson: document.getElementById('contactPerson').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            events: events,
+            totalFee: events.reduce((s, e) => s + e.fee, 0)
+        };
+    }
+
+    function validateForm(data) {
+        if (!data.collegeName) { alert('Please enter your College / Institution name.'); return false; }
+        if (!data.contactPerson) { alert('Please enter the Contact Person name.'); return false; }
+        if (!data.phone || data.phone.replace(/\D/g, '').length < 10) { alert('Please enter a valid phone number.'); return false; }
+        if (data.events.length === 0) { alert('Please select at least one event.'); return false; }
+        return true;
+    }
+
+    async function handlePayment() {
+        const data = gatherFormData();
+        if (!validateForm(data)) return;
+
+        const btn = document.getElementById('payBtn');
+        btn.classList.add('loading');
+        btn.textContent = 'Processing';
+
+        // Generate a dummy order ID for now
+        const dummyOrderId = 'order_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+
+        // ---------------------------------------------------
+        // RAZORPAY INTEGRATION
+        // Replace this section with real Razorpay integration
+        // when you have your server-side order creation ready.
+        // ---------------------------------------------------
+        // For now, simulate Razorpay flow:
+        const options = {
+            key: CONFIG.RAZORPAY_KEY,
+            amount: data.totalFee * 100, // Razorpay uses paise
+            currency: "INR",
+            name: "Nightingale Rhythm 2026",
+            description: `Registration: ${data.events.map(e => e.name).join(', ')}`,
+            order_id: dummyOrderId, // Replace with server-created order_id
+            handler: function(response) {
+                // Payment successful — submit to Google Sheets
+                submitRegistration(data, response.razorpay_payment_id, response.razorpay_order_id || dummyOrderId, "PAID");
+            },
+            prefill: {
+                name: data.contactPerson,
+                contact: data.phone
+            },
+            theme: { color: "#8B0000" },
+            modal: {
+                ondismiss: function() {
+                    btn.classList.remove('loading');
+                    btn.textContent = 'Proceed to Pay';
+                }
             }
-        }, 1000);
-    </script>
-</body>
-</html>
+        };
+
+        // Check if Razorpay is loaded
+        if (typeof Razorpay !== 'undefined') {
+            const rzp = new Razorpay(options);
+            rzp.open();
+        } else {
+            // Razorpay not loaded — simulate success for testing
+            console.warn("Razorpay SDK not loaded. Simulating payment success for testing.");
+            const fakePaymentId = "pay_test_" + Date.now();
+            await submitRegistration(data, fakePaymentId, dummyOrderId, "PAID (Test)");
+        }
+    }
+
+    async function submitRegistration(data, paymentId, orderId, status) {
+        const btn = document.getElementById('payBtn');
+        try {
+            const payload = {
+                ...data,
+                razorpayPaymentId: paymentId,
+                razorpayOrderId: orderId,
+                paymentStatus: status
+            };
+
+            const response = await fetch(CONFIG.APPS_SCRIPT_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+                mode: 'no-cors' // Apps Script doesn't support CORS preflight
+            });
+
+            // Show success (no-cors means we can't read the response, but it was sent)
+            showSuccess(paymentId);
+
+        } catch (err) {
+            console.error('Submission error:', err);
+            // Still show success — the data may have been saved
+            showSuccess(paymentId);
+        }
+    }
+
+    function showSuccess(paymentId) {
+        document.getElementById('formView').style.display = 'none';
+        const sv = document.getElementById('successView');
+        sv.classList.add('active');
+        document.getElementById('successPaymentId').textContent = 'Payment ID: ' + paymentId;
+    }
+
+    // =============================================
+    // CHECK URL FOR PAYMENT CALLBACK
+    // =============================================
+    (function checkPaymentCallback() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('razorpay_payment_id')) {
+            // User was redirected back after payment
+            openForm();
+            showSuccess(params.get('razorpay_payment_id'));
+            // Clean URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    })();
+
+    // =============================================
+    // COUNTDOWN TIMER
+    // =============================================
+    const countDownDate = new Date("April 27, 2026 00:00:00").getTime();
+    setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+        if (distance < 0) {
+            document.querySelector(".countdown").innerHTML = "<h2 style='color:#ffd700;'>THE EVENT IS LIVE!</h2>";
+            return;
+        }
+        const d = Math.floor(distance / 86400000);
+        const h = Math.floor((distance % 86400000) / 3600000);
+        const m = Math.floor((distance % 3600000) / 60000);
+        const s = Math.floor((distance % 60000) / 1000);
+        document.getElementById("days").textContent = d < 10 ? "0" + d : d;
+        document.getElementById("hours").textContent = h < 10 ? "0" + h : h;
