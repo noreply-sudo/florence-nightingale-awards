@@ -149,6 +149,11 @@
             font-size: 0.9rem;
         }
         .fee-table tr:hover { background-color: #faf8ff; }
+
+        /* Dignitary photos — center on face area, not top of head */
+        .dignitary-photo {
+            object-position: center 20%;
+        }
     </style>
 </head>
 <body class="font-body text-gray-800 bg-warmWhite flex flex-col min-h-screen">
@@ -275,8 +280,6 @@
                         <a href="#speakers" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Speakers</a>
                         <a href="#register" class="bg-accent text-primary hover:bg-accentHover px-5 py-2 rounded-md text-sm font-bold transition uppercase tracking-wide shadow-md ml-2">Register</a>
                         
-                        <a href="#sponsorship" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Sponsors</a>
-                        
                         <a href="#contact" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Contact</a>
                     </div>
                 </div>
@@ -295,8 +298,6 @@
                 <a href="#schedule" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">Schedule</a>
                 <a href="#speakers" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">Speakers</a>
                 <a href="#register" onclick="toggleMenu()" class="text-accent font-bold py-3 border-b border-white/10 text-sm uppercase tracking-wide">Register</a>
-                
-                <a href="#sponsorship" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">Sponsors</a>
                 
                 <a href="#contact" onclick="toggleMenu()" class="text-white hover:text-accent py-3 text-sm font-semibold uppercase tracking-wide">Contact</a>
             </div>
@@ -411,7 +412,7 @@
 
                 <!-- CM Siddaramaiah -->
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/3 h-72 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="cm.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=CM+Siddaramaiah'" alt="Shri Siddaramaiah" class="absolute inset-0 w-full h-full object-cover object-top"></div>
+                    <div class="w-full md:w-1/3 h-80 sm:h-96 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="cm.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=CM+Siddaramaiah'" alt="Shri Siddaramaiah" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
                     <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
                         <span class="px-3 py-1 bg-accent/20 text-primary text-xs font-bold uppercase tracking-wider rounded-full inline-block mb-3 w-fit">The Hon'ble Chief Minister</span>
                         <h3 class="text-2xl font-bold text-gray-800 font-display mb-1">Shri Siddaramaiah</h3>
@@ -428,7 +429,7 @@
 
                 <!-- DCM D.K. Shivakumar -->
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/3 h-72 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="dcm.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=DCM+Shivakumar'" alt="Shri D.K. Shivakumar" class="absolute inset-0 w-full h-full object-cover object-top"></div>
+                    <div class="w-full md:w-1/3 h-80 sm:h-96 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="dcm.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=DCM+Shivakumar'" alt="Shri D.K. Shivakumar" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
                     <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
                         <span class="px-3 py-1 bg-accent/20 text-primary text-xs font-bold uppercase tracking-wider rounded-full inline-block mb-3 w-fit">The Hon'ble Deputy Chief Minister</span>
                         <h3 class="text-2xl font-bold text-gray-800 font-display mb-1">Shri D.K. Shivakumar</h3>
@@ -443,7 +444,7 @@
 
                 <!-- Chairman Ivan Nigli -->
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/3 h-72 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="ivan.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=Ivan+Nigli'" alt="Shri Ivan Nigli" class="absolute inset-0 w-full h-full object-cover object-top"></div>
+                    <div class="w-full md:w-1/3 h-80 sm:h-96 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="ivan.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=Ivan+Nigli'" alt="Shri Ivan Nigli" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
                     <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
                         <span class="px-3 py-1 bg-accent/20 text-primary text-xs font-bold uppercase tracking-wider rounded-full inline-block mb-3 w-fit">The Hon'ble Chairman, Florence Nightingale Awards</span>
                         <h3 class="text-2xl font-bold text-gray-800 font-display mb-1">Shri Ivan Nigli</h3>
@@ -461,7 +462,7 @@
 
                 <!-- Dinesh Gundu Rao -->
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/3 h-72 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="dinesh.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=Dinesh+Gundu+Rao'" alt="Shri Dinesh Gundu Rao" class="absolute inset-0 w-full h-full object-cover object-top"></div>
+                    <div class="w-full md:w-1/3 h-80 sm:h-96 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="dinesh.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=Dinesh+Gundu+Rao'" alt="Shri Dinesh Gundu Rao" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
                     <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
                         <span class="px-3 py-1 bg-accent/20 text-primary text-xs font-bold uppercase tracking-wider rounded-full inline-block mb-3 w-fit">The Hon'ble Minister for Health & Family Welfare</span>
                         <h3 class="text-2xl font-bold text-gray-800 font-display mb-1">Shri Dinesh Gundu Rao</h3>
@@ -477,7 +478,7 @@
 
                 <!-- Dr. Sharanprakash R. Patil -->
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/3 h-72 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="saran.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=Dr.+Patil'" alt="Dr. Sharanprakash R. Patil" class="absolute inset-0 w-full h-full object-cover object-top"></div>
+                    <div class="w-full md:w-1/3 h-80 sm:h-96 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="saran.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=Dr.+Patil'" alt="Dr. Sharanprakash R. Patil" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
                     <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
                         <span class="px-3 py-1 bg-accent/20 text-primary text-xs font-bold uppercase tracking-wider rounded-full inline-block mb-3 w-fit">The Hon'ble Minister for Medical Education & Skill Development</span>
                         <h3 class="text-2xl font-bold text-gray-800 font-display mb-1">Shri Dr. Sharanprakash R. Patil</h3>
@@ -494,7 +495,7 @@
 
                 <!-- U.T. Khader -->
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/3 h-72 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="ut.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=U.T.+Khader'" alt="Shri U.T. Khader" class="absolute inset-0 w-full h-full object-cover object-top"></div>
+                    <div class="w-full md:w-1/3 h-80 sm:h-96 md:h-auto bg-gray-200 relative overflow-hidden shrink-0"><img src="ut.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=U.T.+Khader'" alt="Shri U.T. Khader" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
                     <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
                         <span class="px-3 py-1 bg-accent/20 text-primary text-xs font-bold uppercase tracking-wider rounded-full inline-block mb-3 w-fit">The Hon'ble Speaker</span>
                         <h3 class="text-2xl font-bold text-gray-800 font-display mb-1">Shri U.T. Khader</h3>
@@ -517,57 +518,35 @@
             <div class="text-center mb-10">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 font-display">Moments from Previous Years</h2>
                 <div class="w-24 h-1 bg-accent mx-auto rounded"></div>
-                <p class="mt-4 text-gray-600">A glimpse into our journey of honouring nursing excellence.</p>
+                <p class="mt-4 text-gray-600">A glimpse into 24 years of honouring nursing excellence.</p>
             </div>
-            <!-- 2025 -->
-            <div class="mb-10">
-                <h3 class="text-xl font-bold text-primary font-display mb-4 border-l-4 border-accent pl-4">2025 — 24th Awards Ceremony</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2025-1.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2025'" alt="2025" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2025</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2025-2.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2025'" alt="2025" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2025</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2025-3.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2025'" alt="2025" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2025</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2025-4.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2025'" alt="2025" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2025</span></div></div>
-                </div>
-            </div>
-            <!-- 2024 -->
-            <div class="mb-10">
-                <h3 class="text-xl font-bold text-primary font-display mb-4 border-l-4 border-accent pl-4">2024 — 23rd Awards Ceremony</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2024-1.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2024'" alt="2024" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2024</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2024-2.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2024'" alt="2024" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2024</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2024-3.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2024'" alt="2024" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2024</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2024-4.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2024'" alt="2024" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2024</span></div></div>
-                </div>
-            </div>
-            <!-- 2023 -->
-            <div class="mb-10">
-                <h3 class="text-xl font-bold text-primary font-display mb-4 border-l-4 border-accent pl-4">2023 — 22nd Awards Ceremony</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2023-1.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2023'" alt="2023" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2023</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2023-2.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2023'" alt="2023" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2023</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2023-3.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2023'" alt="2023" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2023</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2023-4.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2023'" alt="2023" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2023</span></div></div>
-                </div>
-            </div>
-            <!-- 2022 -->
-            <div class="mb-10">
-                <h3 class="text-xl font-bold text-primary font-display mb-4 border-l-4 border-accent pl-4">2022 — 21st Awards Ceremony</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2022-1.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2022'" alt="2022" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2022</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2022-2.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2022'" alt="2022" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2022</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2022-3.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2022'" alt="2022" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2022</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2022-4.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2022'" alt="2022" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2022</span></div></div>
-                </div>
-            </div>
-            <!-- 2021 -->
-            <div>
-                <h3 class="text-xl font-bold text-primary font-display mb-4 border-l-4 border-accent pl-4">2021 — 20th Awards Ceremony</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2021-1.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2021'" alt="2021" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2021</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2021-2.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2021'" alt="2021" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2021</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2021-3.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2021'" alt="2021" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2021</span></div></div>
-                    <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="gallery/2021-4.jpg" onerror="this.src='https://placehold.co/600x450/E6E6FA/4B0082?text=2021'" alt="2021" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"><div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4"><span class="text-white font-bold text-sm">2021</span></div></div>
-                </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1guLFyVwhWUeRqc3ZahnL9Z9J1hfkUmPW" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1djUAhMIODFfAiw_Wst0ZvtG03LNqKagQ" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1gM8j3w6DlVgYTv3-r4C33BQdt1nZqijz" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1G4EPBQ3Kc5MNLslcwADT2mmafC7By9ru" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/12sYKDHLFOHJpgB1tcaUATy9VbjOCunxS" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1froNvxnpx01HVUc6Wn5Ucve5CIP77C79" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/11fn0MEsyBr9x3G-QtQp50wgT2OuLlcsR" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1dZFlkfbJ7RTNDI8DlxDJh-xBHJDLjuuS" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1Vq4iJexb8F43ReU6vAfO58Oz08uQeuEM" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/10PhCR43V5FZPUqRfAXT_Ywm7mbkoMw59" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1fCdOfXzFM10_FIEz313rOXPt4bahWw2q" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/19duLFOzSlyJWsvcHPgQtD6JhXaDNXwBb" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1qwwbwiitvtHJP4nTaWFU3Fk3QQDKtlqW" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1B6YRDQ6J0aKusburM_ZcpXvZfCiGA6N7" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/161ZPBi6nRPsA_cpk8aNA3h5EPP1qv7QC" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1hsodiQ64NRuaHxrQ14Dvc7NgeLNNquC3" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/13ix2_CCMLiwnVIBIKoG3cN48iViKYEvj" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1Whx8J_kpk1axNs2CHv1zNbBq3OeUPQ7A" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1KIWQ1URWnsK8qTrLt_pIizk7Voa0GXnJ" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1TdZWxLpqr-hNe1MwwIf7byB_C60GDJjE" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1EQ_WzCAW3YkkkxDbYzJKCYbaOrX5EgxG" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1k95l-ekwICJz09DVf7zWei6bhLl76o1X" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1KjnO75m_BdENyvB4D4e9R8NAz3atrnI2" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/10w3sSbccbI7n2RlaeEKHVQkVTdKsHADL" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
+                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1KYOAbJwfqoxUGUF5mZR8pEsormtpXcaT" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
             </div>
         </section>
 
@@ -591,91 +570,6 @@
     </div>
         </section>
 
-<hr class="border-gray-200">
-        
-        <section id="sponsorship" class="py-12 mb-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 font-display">Sponsorship Packages</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Partner with the 25th Florence Nightingale Awards and showcase your brand to top healthcare professionals and institutional leaders.</p>
-                <div class="w-24 h-1 bg-accent mx-auto rounded mt-4"></div>
-            </div>
-
-            <div class="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                
-                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden card-hover flex flex-col mt-0 lg:mt-6">
-                    <div class="bg-gray-100 py-6 text-center border-b border-gray-200">
-                        <h3 class="text-2xl font-bold text-gray-800 font-display">Associate Sponsor</h3>
-                        <p class="text-xs text-gray-500 font-bold tracking-wide uppercase mt-1">6 Slots Available</p>
-                    </div>
-                    <div class="p-8 flex-grow">
-                        <div class="text-center mb-8">
-                            <span class="text-4xl font-bold text-primary font-display">₹1,00,000</span>
-                        </div>
-                        <ul class="space-y-4 text-gray-600 text-sm">
-                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-0.5 mr-3 text-lg"></i> Logo on banners & digital creatives</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-0.5 mr-3 text-lg"></i> Exhibition stall in designated area</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-0.5 mr-3 text-lg"></i> Social media mentions</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-0.5 mr-3 text-lg"></i> Branding in selected event zones</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-accent mt-0.5 mr-3 text-lg"></i> Participation in networking sessions</li>
-                        </ul>
-                    </div>
-                    <div class="p-6 bg-gray-50 border-t border-gray-100 text-center">
-                        <a href="https://wa.me/917829444447?text=Hi!%20I%20am%20interested%20in%20the%20Associate%20Sponsor%20package." target="_blank" class="block w-full py-3 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition">Inquire Now</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-2xl border-2 border-accent relative overflow-hidden lg:scale-105 z-10 flex flex-col">
-                    <div class="absolute top-0 right-0 bg-accent text-primary text-xs font-bold px-4 py-1.5 rounded-bl-lg uppercase tracking-wider">Exclusive</div>
-                    <div class="bg-primary py-8 text-center text-white">
-                        <h3 class="text-3xl font-bold text-accent font-display">Title Sponsor</h3>
-                        <p class="text-xs text-purple-200 font-bold tracking-wide uppercase mt-1">1 Slot Available</p>
-                    </div>
-                    <div class="p-8 flex-grow">
-                        <div class="text-center mb-8">
-                            <span class="text-5xl font-bold text-gray-800 font-display">₹7,00,000</span>
-                        </div>
-                        <ul class="space-y-4 text-gray-600 text-sm">
-                            <li class="flex items-start"><i class="fas fa-star text-accent mt-0.5 mr-3 text-lg"></i> <strong class="text-gray-800">Event titled as: "Awards 2026 powered by [Sponsor Name]"</strong></li>
-                            <li class="flex items-start"><i class="fas fa-star text-accent mt-0.5 mr-3 text-lg"></i> Prime stage branding (center LED + main backdrop)</li>
-                            <li class="flex items-start"><i class="fas fa-star text-accent mt-0.5 mr-3 text-lg"></i> Speaking opportunity (5–10 minutes)</li>
-                            <li class="flex items-start"><i class="fas fa-star text-accent mt-0.5 mr-3 text-lg"></i> Exclusive premium exhibition space</li>
-                            <li class="flex items-start"><i class="fas fa-star text-accent mt-0.5 mr-3 text-lg"></i> VIP networking access with awardees & dignitaries</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-0.5 mr-3 text-lg"></i> Logo across all official branding materials</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-0.5 mr-3 text-lg"></i> Logo on delegate kits, badges & certificates</li>
-                            <li class="flex items-start"><i class="fas fa-check text-green-500 mt-0.5 mr-3 text-lg"></i> Prominent mention in press releases</li>
-                        </ul>
-                    </div>
-                    <div class="p-6 bg-gray-50 border-t border-gray-100 text-center">
-                        <a href="https://wa.me/917829444447?text=Hi!%20I%20am%20interested%20in%20the%20Title%20Sponsor%20package." target="_blank" class="block w-full py-4 bg-accent text-primary font-bold text-lg rounded-lg shadow-lg hover:bg-yellow-400 transition transform hover:-translate-y-1">Become Title Sponsor</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden card-hover flex flex-col mt-0 lg:mt-6">
-                    <div class="bg-purple-50 py-6 text-center border-b border-purple-100">
-                        <h3 class="text-2xl font-bold text-primary font-display">Co-Powered</h3>
-                        <p class="text-xs text-primary font-bold tracking-wide uppercase mt-1">3 Slots Available</p>
-                    </div>
-                    <div class="p-8 flex-grow">
-                        <div class="text-center mb-8">
-                            <span class="text-4xl font-bold text-gray-800 font-display">₹3,00,000</span>
-                        </div>
-                        <ul class="space-y-4 text-gray-600 text-sm">
-                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-0.5 mr-3 text-lg"></i> Secondary logo placement on all creatives</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-0.5 mr-3 text-lg"></i> Branding on stage side panels</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-0.5 mr-3 text-lg"></i> Exhibition stall space</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-0.5 mr-3 text-lg"></i> Logo on official website & registration</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-0.5 mr-3 text-lg"></i> Access to curated audience database</li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-0.5 mr-3 text-lg"></i> Networking opportunities with stakeholders</li>
-                        </ul>
-                    </div>
-                    <div class="p-6 bg-gray-50 border-t border-gray-100 text-center">
-                        <a href="https://wa.me/917829444447?text=Hi!%20I%20am%20interested%20in%20the%20Co-Powered%20Sponsor%20package." target="_blank" class="block w-full py-3 bg-primary text-white font-bold rounded-lg shadow hover:bg-purple-900 transition">Inquire Now</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        
     </main>
 
     <!-- ===== FOOTER ===== -->
@@ -687,7 +581,7 @@
                     <ul class="space-y-4">
                         <li class="flex items-start"><i class="fas fa-user-tie mt-1 mr-3 text-purple-300"></i><span class="text-purple-100"><strong class="text-white block mb-1">Event Coordinator</strong>Mrs. Sini George<br>Chief of Operations, Ezi Nurse</span></li>
                         <li class="flex items-center"><i class="fab fa-whatsapp mr-3 text-purple-300 text-lg"></i><span class="text-purple-100">+91 78294 44447</span></li>
-                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-purple-300"></i><span class="text-purple-100">sini.ezinurse@gmail.com</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-purple-300"></i><span class="text-purple-100"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aeddc7c0c780cbd4c7c0dbdcddcbeec9c3cfc7c280cdc1c3">[email&#160;protected]</a></span></li>
                     </ul>
                 </div>
                 <div>
