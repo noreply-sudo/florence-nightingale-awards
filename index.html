@@ -40,7 +40,6 @@
             background: linear-gradient(170deg, #1a0033 0%, #2E0050 25%, #3d006b 50%, #2E0050 75%, #1a0033 100%);
         }
 
-        /* Overlay system — tuned so background image is visible while text stays readable */
         .hero-overlay-top {
             background: linear-gradient(to bottom, rgba(10, 0, 20, 0.85) 0%, rgba(10, 0, 20, 0.4) 50%, transparent 100%);
         }
@@ -48,10 +47,8 @@
             background: linear-gradient(to top, rgba(10, 0, 20, 0.95) 0%, rgba(30, 0, 60, 0.5) 35%, transparent 100%);
         }
 
-        
-/* Unified logo bar - Glass Primary Purple */
         .logo-bar {
-            background: rgba(75, 0, 130, 0.5); /* 75, 0, 130 is your theme purple. 0.5 is the transparency. */
+            background: rgba(75, 0, 130, 0.5);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 215, 0, 0.15);
@@ -60,17 +57,12 @@
             filter: brightness(1.1) contrast(1.05);
         }
 
-        /* Divider line between logos */
         .logo-divider {
             width: 1px;
             height: 48px;
             background: rgba(255, 255, 255, 0.15);
         }
-        /*
-         * Gold shimmer text — uses background-clip: text.
-         * padding-bottom + negative margin prevents descenders (g, y, p)
-         * from being clipped by the background-clip boundary.
-         */
+
         .gold-shimmer {
             background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700, #FFEC8B, #FFD700);
             background-size: 300% 100%;
@@ -150,9 +142,141 @@
         }
         .fee-table tr:hover { background-color: #faf8ff; }
 
-        /* Dignitary photos — center on face area, not top of head */
         .dignitary-photo {
             object-position: center 20%;
+        }
+
+        /* ===== REELS SECTION ===== */
+        .reels-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        @media (min-width: 640px) {
+            .reels-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (min-width: 1024px) {
+            .reels-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .reel-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+        }
+        .reel-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px -8px rgba(75, 0, 130, 0.18);
+            border-color: #4B0082;
+        }
+
+        .reel-thumbnail-wrap {
+            position: relative;
+            aspect-ratio: 9 / 16;
+            background: linear-gradient(135deg, #1a0033, #2E0050, #3d006b);
+            overflow: hidden;
+        }
+
+        .reel-thumbnail-wrap iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Play overlay shown on top of placeholder thumbnails */
+        .reel-play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.25);
+            opacity: 0;
+            transition: opacity 0.25s;
+            z-index: 2;
+        }
+        .reel-card:hover .reel-play-overlay {
+            opacity: 1;
+        }
+        .reel-play-btn {
+            width: 56px;
+            height: 56px;
+            background: rgba(255,255,255,0.92);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .reel-play-btn i {
+            color: #4B0082;
+            font-size: 22px;
+            margin-left: 3px;
+        }
+
+        /* Reels icon badge (like IG) */
+        .reel-badge {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(0,0,0,0.55);
+            backdrop-filter: blur(6px);
+            padding: 4px 10px;
+            border-radius: 6px;
+            z-index: 3;
+        }
+        .reel-badge i { color: #fff; font-size: 14px; }
+        .reel-badge span { color: #fff; font-size: 11px; font-weight: 600; }
+
+        .reel-caption {
+            padding: 12px 14px;
+        }
+        .reel-caption p {
+            font-size: 0.82rem;
+            color: #374151;
+            line-height: 1.45;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .reel-caption .reel-handle {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #4B0082;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .reel-caption .reel-handle img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1.5px solid #E6E6FA;
+        }
+
+        /* Instagram-style section header */
+        .reels-header-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            flex-shrink: 0;
         }
     </style>
 </head>
@@ -161,28 +285,20 @@
     <!-- ===== HERO ===== -->
     <div class="relative w-full min-h-[780px] md:min-h-[720px] overflow-hidden" id="home">
 
-        <!-- Background image — opacity-50 so it shows through the gradient -->
         <img src="hero-banner.png"
              alt="Hero Background"
              class="absolute inset-0 w-full h-full object-cover object-center opacity-100 z-0"
              onerror="this.style.display='none'">
 
-        <!-- Base gradient — opacity-70 lets the image bleed through -->
         <div class="absolute inset-0 hero-gradient opacity-10 z-[1]"></div>
-
-        <!-- Dark overlays for text contrast -->
         <div class="absolute inset-0 hero-overlay-top z-[2]"></div>
         <div class="absolute inset-0 hero-overlay-bottom z-[2]"></div>
-
-        <!-- Subtle texture -->
         <div class="noise-overlay z-[3]"></div>
 
         <!-- ===== UNIFIED LOGO BAR ===== -->
         <div class="relative z-20 logo-bar">
             <div class="max-w-6xl mx-auto px-4 md:px-8 py-4">
                 <div class="flex items-center justify-center gap-4 md:gap-8 flex-wrap md:flex-nowrap">
-
-                    <!-- Govt of Karnataka -->
                     <div class="flex items-center gap-3 shrink-0">
                         <img src="govt-karnataka-logo.png" onerror="this.src='https://placehold.co/80x80/FFFFFF/4B0082?text=GoK'" alt="Government of Karnataka" class="h-11 w-11 md:h-14 md:w-14 rounded-full border border-white/20 object-contain bg-white/95 p-0.5">
                         <div class="hidden md:block text-left">
@@ -190,10 +306,7 @@
                             <p class="text-white text-sm font-bold leading-tight mt-0.5">Govt. of Karnataka</p>
                         </div>
                     </div>
-
                     <div class="logo-divider hidden md:block"></div>
-
-                    <!-- AIUC -->
                     <div class="flex items-center gap-3 shrink-0">
                         <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/80x80/FFFFFF/4B0082?text=AIUC'" alt="Anglo Indian Unity Center" class="h-11 w-11 md:h-14 md:w-14 rounded-full border border-white/20 object-contain bg-white/95 p-0.5">
                         <div class="hidden md:block text-left">
@@ -201,10 +314,7 @@
                             <p class="text-white text-sm font-bold leading-tight mt-0.5">Anglo Indian Unity Center</p>
                         </div>
                     </div>
-
                     <div class="logo-divider hidden md:block"></div>
-
-                    <!-- Ezi Nurse -->
                     <div class="flex items-center gap-3 shrink-0">
                         <img src="ezinurse-logo.png" onerror="this.src='https://placehold.co/80x80/FFFFFF/4B0082?text=EziNurse'" alt="Ezi Nurse" class="h-11 w-11 md:h-14 md:w-14 rounded-full border border-white/20 object-contain bg-white/95 p-0.5">
                         <div class="hidden md:block text-left">
@@ -212,35 +322,26 @@
                             <p class="text-white text-sm font-bold leading-tight mt-0.5">Ezi Nurse</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
 
-        <!-- ===== HERO CONTENT — Single focal point ===== -->
+        <!-- ===== HERO CONTENT ===== -->
         <div class="relative z-20 flex flex-col items-center justify-center text-center px-6 md:px-12 pt-12 md:pt-16 pb-20 md:pb-24 min-h-[580px] md:min-h-[560px]">
             <div class="max-w-3xl mx-auto">
-
-                <!-- Silver Jubilee badge -->
                 <div class="inline-flex items-center gap-2 px-5 py-2 border border-accent/40 rounded-full mb-6 animate-fade-in-up bg-accent/5">
                     <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
                     <span class="text-accent font-bold text-xs md:text-sm uppercase tracking-[0.3em]">Silver Jubilee Year</span>
                     <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
                 </div>
-
-                <!-- Main title — leading-[1.2] gives descenders room -->
                 <h1 class="font-display font-black tracking-tight leading-[1.2] mb-6 animate-fade-in-up delay-1">
                     <span class="block text-5xl md:text-8xl text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">25<sup class="text-3xl md:text-5xl align-super">th</sup></span>
                     <span class="block text-4xl md:text-7xl gold-shimmer mt-1">Florence Nightingale</span>
                     <span class="block text-4xl md:text-6xl text-white/90 mt-1 font-bold">Awards — 2026</span>
                 </h1>
-
-                <!-- Subtitle -->
                 <p class="text-white/80 text-base md:text-xl font-normal max-w-xl mx-auto leading-relaxed mb-8 animate-fade-in-up delay-2">
                     Honouring the extraordinary dedication of nurses and healthcare professionals who illuminate lives through compassion and service.
                 </p>
-
-                <!-- Date & Venue -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8 animate-fade-in-up delay-2">
                     <div class="flex items-center gap-2 text-white/90">
                         <i class="far fa-calendar-alt text-accent text-sm"></i>
@@ -252,8 +353,6 @@
                         <span class="font-bold text-sm md:text-base tracking-wide">Vidhana Soudha, Bangalore</span>
                     </div>
                 </div>
-
-                <!-- CTAs -->
                 <div class="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-3">
                     <a href="#register" class="px-8 py-3.5 bg-white text-primary font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-gray-100 transition shadow-lg shadow-black/20 hover:shadow-black/30">
                         Register Now
@@ -264,12 +363,11 @@
                 </div>
             </div>
         </div>
-
-        <!-- Bottom fade to page background -->
         <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-warmWhite to-transparent z-10"></div>
     </div>
 
-<nav class="bg-primary sticky top-0 z-50 shadow-xl border-t border-white/10">
+    <!-- ===== NAV ===== -->
+    <nav class="bg-primary sticky top-0 z-50 shadow-xl border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-14">
                 <div class="hidden md:flex justify-center w-full">
@@ -278,8 +376,8 @@
                         <a href="#about" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">About</a>
                         <a href="#schedule" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Schedule</a>
                         <a href="#speakers" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Speakers</a>
+                        <a href="#reels" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Reels</a>
                         <a href="#register" class="bg-accent text-primary hover:bg-accentHover px-5 py-2 rounded-md text-sm font-bold transition uppercase tracking-wide shadow-md ml-2">Register</a>
-                        
                         <a href="#contact" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Contact</a>
                     </div>
                 </div>
@@ -297,12 +395,13 @@
                 <a href="#about" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">About</a>
                 <a href="#schedule" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">Schedule</a>
                 <a href="#speakers" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">Speakers</a>
+                <a href="#reels" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">Reels</a>
                 <a href="#register" onclick="toggleMenu()" class="text-accent font-bold py-3 border-b border-white/10 text-sm uppercase tracking-wide">Register</a>
-                
                 <a href="#contact" onclick="toggleMenu()" class="text-white hover:text-accent py-3 text-sm font-semibold uppercase tracking-wide">Contact</a>
             </div>
         </div>
     </nav>
+
     <!-- ===== TITLE STRIP ===== -->
     <section class="bg-white py-8 border-b border-gray-200">
         <div class="max-w-5xl mx-auto text-center px-4">
@@ -432,7 +531,7 @@
                     </div>
                 </div>
 
-                <!-- DCM D.K. Shivakumar -->
+                <!-- DCM D.K. Shivakumar (hidden) -->
                 <div class="hidden bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
                     <div class="w-full md:w-1/3 min-h-[320px] md:min-h-[400px] bg-gray-200 relative overflow-hidden shrink-0"><img src="dcm.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=DCM+Shivakumar'" alt="Shri D.K. Shivakumar" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
                     <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
@@ -524,7 +623,6 @@
                 <div class="w-24 h-1 bg-accent mx-auto rounded"></div>
                 <p class="mt-4 text-gray-600">A glimpse into 24 years of honouring nursing excellence.</p>
             </div>
-
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
                 <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1guLFyVwhWUeRqc3ZahnL9Z9J1hfkUmPW" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
                 <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1djUAhMIODFfAiw_Wst0ZvtG03LNqKagQ" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
@@ -566,15 +664,221 @@
                 </div>
             </div>
             <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-xl border-t-4 border-primary text-center">
-    <div class="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-ticket-alt text-3xl text-primary"></i></div>
-    <h3 class="text-2xl font-bold text-gray-800 mb-2 font-display">Register for the Ceremony</h3>
-    <p class="text-gray-500 text-sm mb-6">Secure your spot at the 25th Florence Nightingale Awards Ceremony.</p>
-    
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbgVXOWIrjyetumCm995DAEDgF_tq4k-ixnpjhs5ROsRuYbA/viewform" target="_blank" class="block w-full py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-purple-900 transition shadow-lg transform hover:-translate-y-1"><span>Register Now</span> <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-    </div>
+                <div class="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-ticket-alt text-3xl text-primary"></i></div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2 font-display">Register for the Ceremony</h3>
+                <p class="text-gray-500 text-sm mb-6">Secure your spot at the 25th Florence Nightingale Awards Ceremony.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbgVXOWIrjyetumCm995DAEDgF_tq4k-ixnpjhs5ROsRuYbA/viewform" target="_blank" class="block w-full py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-purple-900 transition shadow-lg transform hover:-translate-y-1"><span>Register Now</span> <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
+            </div>
         </section>
 
     </main>
+
+    <!-- ===== REELS SECTION ===== -->
+    <section id="reels" class="bg-white py-14 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section header — Instagram-inspired -->
+            <div class="text-center mb-10">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="reels-header-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary font-display">Reels</h2>
+                </div>
+                <div class="w-24 h-1 bg-accent mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600 max-w-lg mx-auto">Watch highlights, behind-the-scenes moments, and stories from the Florence Nightingale Awards.</p>
+            </div>
+
+            <!--
+                ==========================================
+                HOW TO ADD YOUR YOUTUBE SHORTS / REELS:
+                ==========================================
+                1. Upload your 9:16 video to YouTube as a Short.
+                2. Get the video ID (the part after /shorts/ in the URL).
+                   Example: youtube.com/shorts/abcd1234 → ID is abcd1234
+                3. Replace YOUR_VIDEO_ID_1, YOUR_VIDEO_ID_2, etc. with
+                   your actual YouTube video IDs below.
+                4. Update the caption text for each reel.
+                5. To add more reels, duplicate any reel-card block.
+
+                The thumbnail loads automatically from YouTube.
+                Clicking the thumbnail plays the video inline!
+            -->
+
+            <!-- Reels Grid -->
+            <div class="reels-grid">
+
+                <!-- Reel 1 -->
+                <div class="reel-card">
+                    <div class="reel-thumbnail-wrap" data-video-id="YOUR_VIDEO_ID_1" onclick="playReel(this)">
+                        <img src="https://placehold.co/360x640/2E0050/FFD700?text=Reel+1" alt="Reel thumbnail" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
+                        <div class="reel-play-overlay" style="opacity:1;">
+                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="reel-badge">
+                            <i class="fas fa-film"></i>
+                            <span>Reel</span>
+                        </div>
+                    </div>
+                    <div class="reel-caption">
+                        <div class="reel-handle">
+                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
+                            <span>FN Awards</span>
+                        </div>
+                        <p>25th Florence Nightingale Awards — Silver Jubilee Highlights</p>
+                    </div>
+                </div>
+
+                <!-- Reel 2 -->
+                <div class="reel-card">
+                    <div class="reel-thumbnail-wrap" data-video-id="YOUR_VIDEO_ID_2" onclick="playReel(this)">
+                        <img src="https://placehold.co/360x640/2E0050/FFD700?text=Reel+2" alt="Reel thumbnail" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
+                        <div class="reel-play-overlay" style="opacity:1;">
+                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="reel-badge">
+                            <i class="fas fa-film"></i>
+                            <span>Reel</span>
+                        </div>
+                    </div>
+                    <div class="reel-caption">
+                        <div class="reel-handle">
+                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
+                            <span>FN Awards</span>
+                        </div>
+                        <p>Nurses making a difference — Inspiring stories from Karnataka</p>
+                    </div>
+                </div>
+
+                <!-- Reel 3 -->
+                <div class="reel-card">
+                    <div class="reel-thumbnail-wrap" data-video-id="YOUR_VIDEO_ID_3" onclick="playReel(this)">
+                        <img src="https://placehold.co/360x640/2E0050/FFD700?text=Reel+3" alt="Reel thumbnail" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
+                        <div class="reel-play-overlay" style="opacity:1;">
+                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="reel-badge">
+                            <i class="fas fa-film"></i>
+                            <span>Reel</span>
+                        </div>
+                    </div>
+                    <div class="reel-caption">
+                        <div class="reel-handle">
+                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
+                            <span>FN Awards</span>
+                        </div>
+                        <p>Behind the scenes — Setting up the ceremony at Vidhana Soudha</p>
+                    </div>
+                </div>
+
+                <!-- Reel 4 -->
+                <div class="reel-card">
+                    <div class="reel-thumbnail-wrap" data-video-id="YOUR_VIDEO_ID_4" onclick="playReel(this)">
+                        <img src="https://placehold.co/360x640/2E0050/FFD700?text=Reel+4" alt="Reel thumbnail" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
+                        <div class="reel-play-overlay" style="opacity:1;">
+                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="reel-badge">
+                            <i class="fas fa-film"></i>
+                            <span>Reel</span>
+                        </div>
+                    </div>
+                    <div class="reel-caption">
+                        <div class="reel-handle">
+                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
+                            <span>FN Awards</span>
+                        </div>
+                        <p>Award-winning nurses share their journeys of compassion and care</p>
+                    </div>
+                </div>
+
+                <!-- Reel 5 -->
+                <div class="reel-card">
+                    <div class="reel-thumbnail-wrap" data-video-id="YOUR_VIDEO_ID_5" onclick="playReel(this)">
+                        <img src="https://placehold.co/360x640/2E0050/FFD700?text=Reel+5" alt="Reel thumbnail" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
+                        <div class="reel-play-overlay" style="opacity:1;">
+                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="reel-badge">
+                            <i class="fas fa-film"></i>
+                            <span>Reel</span>
+                        </div>
+                    </div>
+                    <div class="reel-caption">
+                        <div class="reel-handle">
+                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
+                            <span>FN Awards</span>
+                        </div>
+                        <p>Cultural performances at the 24th Florence Nightingale Awards</p>
+                    </div>
+                </div>
+
+                <!-- Reel 6 -->
+                <div class="reel-card">
+                    <div class="reel-thumbnail-wrap" data-video-id="YOUR_VIDEO_ID_6" onclick="playReel(this)">
+                        <img src="https://placehold.co/360x640/2E0050/FFD700?text=Reel+6" alt="Reel thumbnail" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
+                        <div class="reel-play-overlay" style="opacity:1;">
+                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="reel-badge">
+                            <i class="fas fa-film"></i>
+                            <span>Reel</span>
+                        </div>
+                    </div>
+                    <div class="reel-caption">
+                        <div class="reel-handle">
+                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
+                            <span>FN Awards</span>
+                        </div>
+                        <p>Celebrating 25 years of honouring nursing excellence in Karnataka</p>
+                    </div>
+                </div>
+
+                <!-- Reel 7 -->
+                <div class="reel-card">
+                    <div class="reel-thumbnail-wrap" data-video-id="YOUR_VIDEO_ID_7" onclick="playReel(this)">
+                        <img src="https://placehold.co/360x640/2E0050/FFD700?text=Reel+7" alt="Reel thumbnail" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
+                        <div class="reel-play-overlay" style="opacity:1;">
+                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="reel-badge">
+                            <i class="fas fa-film"></i>
+                            <span>Reel</span>
+                        </div>
+                    </div>
+                    <div class="reel-caption">
+                        <div class="reel-handle">
+                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
+                            <span>FN Awards</span>
+                        </div>
+                        <p>Dignitaries address the importance of nursing in modern healthcare</p>
+                    </div>
+                </div>
+
+                <!-- Reel 8 -->
+                <div class="reel-card">
+                    <div class="reel-thumbnail-wrap" data-video-id="YOUR_VIDEO_ID_8" onclick="playReel(this)">
+                        <img src="https://placehold.co/360x640/2E0050/FFD700?text=Reel+8" alt="Reel thumbnail" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
+                        <div class="reel-play-overlay" style="opacity:1;">
+                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="reel-badge">
+                            <i class="fas fa-film"></i>
+                            <span>Reel</span>
+                        </div>
+                    </div>
+                    <div class="reel-caption">
+                        <div class="reel-handle">
+                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
+                            <span>FN Awards</span>
+                        </div>
+                        <p>Lamp lighting ceremony — A tribute to Florence Nightingale's legacy</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- ===== FOOTER ===== -->
     <footer id="contact" class="bg-primary text-white py-12 mt-auto">
@@ -601,6 +905,7 @@
                         <li><a href="#home" class="hover:text-white hover:underline">Home</a></li>
                         <li><a href="#about" class="hover:text-white hover:underline">About the Awards</a></li>
                         <li><a href="#schedule" class="hover:text-white hover:underline">Ceremony Schedule</a></li>
+                        <li><a href="#reels" class="hover:text-white hover:underline">Reels</a></li>
                         <li><a href="#register" class="hover:text-white hover:underline">Register</a></li>
                     </ul>
                 </div>
@@ -622,6 +927,109 @@
             menu.classList.toggle('hidden');
         }
         document.getElementById('mobile-menu-btn').addEventListener('click', toggleMenu);
+
+        /**
+         * Click-to-play: replaces thumbnail with a YouTube Shorts iframe.
+         * When one reel starts, any previously playing reel reverts to its thumbnail.
+         */
+        let activeReel = null;
+
+        function playReel(container) {
+            const videoId = container.getAttribute('data-video-id');
+            if (!videoId || videoId.startsWith('YOUR_VIDEO_ID')) {
+                // Placeholder — no real video linked yet
+                return;
+            }
+
+            // If this reel is already playing, pause it (revert to thumbnail)
+            if (activeReel === container) {
+                stopReel(container);
+                activeReel = null;
+                return;
+            }
+
+            // Stop any other playing reel first
+            if (activeReel) {
+                stopReel(activeReel);
+            }
+
+            // Hide thumbnail + overlay + badge
+            const thumb = container.querySelector('.reel-thumb-img');
+            const overlay = container.querySelector('.reel-play-overlay');
+            const badge = container.querySelector('.reel-badge');
+            if (thumb) thumb.style.display = 'none';
+            if (overlay) overlay.style.display = 'none';
+            if (badge) badge.style.display = 'none';
+
+            // Create and insert iframe
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&loop=1&playlist=' + videoId + '&rel=0&modestbranding=1&playsinline=1';
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.className = 'reel-iframe';
+            iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;z-index:5;';
+            container.appendChild(iframe);
+
+            // Remove the onclick so tapping the iframe area doesn't re-trigger
+            container.removeAttribute('onclick');
+
+            // Add a small close button in the corner
+            const closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+            closeBtn.className = 'reel-close-btn';
+            closeBtn.style.cssText = 'position:absolute;top:8px;right:8px;z-index:10;width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,0.6);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;backdrop-filter:blur(4px);transition:background 0.2s;';
+            closeBtn.onmouseenter = function(){ this.style.background='rgba(0,0,0,0.85)'; };
+            closeBtn.onmouseleave = function(){ this.style.background='rgba(0,0,0,0.6)'; };
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                stopReel(container);
+                activeReel = null;
+            });
+            container.appendChild(closeBtn);
+
+            activeReel = container;
+        }
+
+        function stopReel(container) {
+            // Remove iframe
+            const iframe = container.querySelector('.reel-iframe');
+            if (iframe) iframe.remove();
+
+            // Remove close button
+            const closeBtn = container.querySelector('.reel-close-btn');
+            if (closeBtn) closeBtn.remove();
+
+            // Restore thumbnail + overlay + badge
+            const thumb = container.querySelector('.reel-thumb-img');
+            const overlay = container.querySelector('.reel-play-overlay');
+            const badge = container.querySelector('.reel-badge');
+            if (thumb) thumb.style.display = '';
+            if (overlay) overlay.style.display = '';
+            if (badge) badge.style.display = '';
+
+            // Re-attach onclick
+            container.setAttribute('onclick', 'playReel(this)');
+        }
+
+        /*
+         * Auto-load YouTube thumbnails for reels that have real video IDs.
+         * This replaces the placeholder image with the actual YouTube thumbnail.
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.reel-thumbnail-wrap[data-video-id]').forEach(function(wrap) {
+                const vid = wrap.getAttribute('data-video-id');
+                if (vid && !vid.startsWith('YOUR_VIDEO_ID')) {
+                    const thumb = wrap.querySelector('.reel-thumb-img');
+                    if (thumb) {
+                        // Use maxresdefault for best quality, fall back to hqdefault
+                        thumb.src = 'https://img.youtube.com/vi/' + vid + '/maxresdefault.jpg';
+                        thumb.onerror = function() {
+                            this.src = 'https://img.youtube.com/vi/' + vid + '/hqdefault.jpg';
+                        };
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>
