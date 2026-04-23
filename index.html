@@ -1013,26 +1013,6 @@
             // Re-attach onclick
             container.setAttribute('onclick', 'playReel(this)');
         }
-
-        /*
-         * Auto-load YouTube thumbnails for reels that have real video IDs.
-         * This replaces the placeholder image with the actual YouTube thumbnail.
-         */
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.reel-thumbnail-wrap[data-video-id]').forEach(function(wrap) {
-                const vid = wrap.getAttribute('data-video-id');
-                if (vid && !vid.startsWith('YOUR_VIDEO_ID')) {
-                    const thumb = wrap.querySelector('.reel-thumb-img');
-                    if (thumb) {
-                        // Use maxresdefault for best quality, fall back to hqdefault
-                        thumb.src = 'https://img.youtube.com/vi/' + vid + '/maxresdefault.jpg';
-                        thumb.onerror = function() {
-                            this.src = 'https://img.youtube.com/vi/' + vid + '/hqdefault.jpg';
-                        };
-                    }
-                }
-            });
-        });
     </script>
 </body>
 </html>
