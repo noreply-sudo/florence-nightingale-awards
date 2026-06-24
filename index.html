@@ -3,865 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>25th Florence Nightingale Awards 2026 — Silver Jubilee Year</title>
-
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="25th Florence Nightingale Awards 2026 — Silver Jubilee Year" />
-    <meta property="og:description" content="In association with Government of Karnataka. Anglo Indian Unity Center Presents. June 17, 2026 | Vidhana Soudha, Bangalore." />
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4B0082',
-                        primaryDark: '#2E0050',
-                        accent: '#FFD700',
-                        accentHover: '#FFC300',
-                        warmWhite: '#FDF8F0',
-                        softPurple: '#E6E6FA',
-                    },
-                    fontFamily: {
-                        display: ['"Playfair Display"', 'serif'],
-                        body: ['"Source Sans 3"', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    <title>404 - Page Not Found</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
-
-        html { scroll-behavior: smooth; }
-
-        .hero-gradient {
-            background: linear-gradient(170deg, #1a0033 0%, #2E0050 25%, #3d006b 50%, #2E0050 75%, #1a0033 100%);
+        /* CSS Reset for consistent rendering */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .hero-overlay-top {
-            background: linear-gradient(to bottom, rgba(10, 0, 20, 0.85) 0%, rgba(10, 0, 20, 0.4) 50%, transparent 100%);
-        }
-        .hero-overlay-bottom {
-            background: linear-gradient(to top, rgba(10, 0, 20, 0.95) 0%, rgba(30, 0, 60, 0.5) 35%, transparent 100%);
-        }
-
-        .logo-bar {
-            background: rgba(75, 0, 130, 0.5);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 215, 0, 0.15);
-        }
-        .logo-bar img {
-            filter: brightness(1.1) contrast(1.05);
+        body {
+            font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f4f6;
+            color: #333333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
         }
 
-        .logo-divider {
-            width: 1px;
-            height: 48px;
-            background: rgba(255, 255, 255, 0.15);
+        .error-container {
+            background-color: #ffffff;
+            padding: 50px 60px;
+            border-top: 4px solid #2c3e50; /* Formal dark slate accent */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 600px;
+            width: 90%;
         }
 
-        .gold-shimmer {
-            background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700, #FFEC8B, #FFD700);
-            background-size: 300% 100%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shimmer 4s ease-in-out infinite;
-            padding-bottom: 0.15em;
-            margin-bottom: -0.15em;
-            display: inline-block;
+        .error-code {
+            font-size: 80px;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            letter-spacing: -2px;
         }
 
-        @keyframes shimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-        }
-
-        .delay-1 { animation-delay: 0.15s; }
-        .delay-2 { animation-delay: 0.3s; }
-        .delay-3 { animation-delay: 0.45s; }
-        .delay-4 { animation-delay: 0.6s; }
-
-        .lamp-icon {
-            filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.5));
-        }
-
-        .card-hover {
-            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .card-hover:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px -12px rgba(75, 0, 130, 0.2);
-        }
-
-        .timeline-dot::before {
-            content: '';
-            position: absolute;
-            left: -9px;
-            top: 6px;
-            width: 16px;
-            height: 16px;
-            background: #FFD700;
-            border-radius: 50%;
-            border: 3px solid #4B0082;
-            z-index: 1;
-        }
-
-        .noise-overlay {
-            position: absolute;
-            inset: 0;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            pointer-events: none;
-        }
-
-        .fee-table th {
-            background-color: #4B0082;
-            color: white;
-            padding: 14px 16px;
-            font-size: 0.9rem;
+        .error-title {
+            font-size: 22px;
             font-weight: 600;
-        }
-        .fee-table td {
-            padding: 14px 16px;
-            border-bottom: 1px solid #e5e7eb;
-            font-size: 0.9rem;
-        }
-        .fee-table tr:hover { background-color: #faf8ff; }
-
-        .dignitary-photo {
-            object-position: center 20%;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #555555;
         }
 
-        /* ===== REELS SECTION ===== */
-        .reels-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-        }
-        @media (min-width: 640px) {
-            .reels-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (min-width: 1024px) {
-            .reels-grid { grid-template-columns: repeat(4, 1fr); }
+        .error-message {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666666;
+            margin-bottom: 30px;
         }
 
-        .reel-card {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #e5e7eb;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            cursor: pointer;
-        }
-        .reel-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px -8px rgba(75, 0, 130, 0.18);
-            border-color: #4B0082;
+        .divider {
+            height: 1px;
+            background-color: #eaeaea;
+            margin: 0 auto 30px auto;
+            width: 50%;
         }
 
-        .reel-thumbnail-wrap {
-            position: relative;
-            aspect-ratio: 9 / 16;
-            background: linear-gradient(135deg, #1a0033, #2E0050, #3d006b);
-            overflow: hidden;
+        .home-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
         }
 
-        .reel-thumbnail-wrap iframe {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .reel-play-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0,0,0,0.25);
-            opacity: 0;
-            transition: opacity 0.25s;
-            z-index: 2;
-        }
-        .reel-card:hover .reel-play-overlay {
-            opacity: 1;
-        }
-        .reel-play-btn {
-            width: 56px;
-            height: 56px;
-            background: rgba(255,255,255,0.92);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-        .reel-play-btn i {
-            color: #4B0082;
-            font-size: 22px;
-            margin-left: 3px;
-        }
-
-        .reel-badge {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            background: rgba(0,0,0,0.55);
-            backdrop-filter: blur(6px);
-            padding: 4px 10px;
-            border-radius: 6px;
-            z-index: 3;
-        }
-        .reel-badge i { color: #fff; font-size: 14px; }
-        .reel-badge span { color: #fff; font-size: 11px; font-weight: 600; }
-
-        .reel-caption {
-            padding: 12px 14px;
-        }
-        .reel-caption p {
-            font-size: 0.82rem;
-            color: #374151;
-            line-height: 1.45;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .reel-caption .reel-handle {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #4B0082;
-            margin-bottom: 4px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        .reel-caption .reel-handle img {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1.5px solid #E6E6FA;
-        }
-
-        .reels-header-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
-            background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 22px;
-            flex-shrink: 0;
+        .home-button:hover {
+            background-color: #1a252f;
         }
     </style>
 </head>
-<body class="font-body text-gray-800 bg-warmWhite flex flex-col min-h-screen">
+<body>
 
-    <!-- ===== HERO ===== -->
-    <div class="relative w-full min-h-[780px] md:min-h-[720px] overflow-hidden" id="home">
-
-        <img src="hero-banner.png"
-             alt="Hero Background"
-             class="absolute inset-0 w-full h-full object-cover object-center opacity-100 z-0"
-             onerror="this.style.display='none'">
-
-        <div class="absolute inset-0 hero-gradient opacity-10 z-[1]"></div>
-        <div class="absolute inset-0 hero-overlay-top z-[2]"></div>
-        <div class="absolute inset-0 hero-overlay-bottom z-[2]"></div>
-        <div class="noise-overlay z-[3]"></div>
-
-        <!-- ===== UNIFIED LOGO BAR ===== -->
-        <div class="relative z-20 logo-bar">
-            <div class="max-w-6xl mx-auto px-4 md:px-8 py-4">
-                <div class="flex items-center justify-center gap-4 md:gap-8 flex-wrap md:flex-nowrap">
-                    <div class="flex items-center gap-3 shrink-0">
-                        <img src="govt-karnataka-logo.png" onerror="this.src='https://placehold.co/80x80/FFFFFF/4B0082?text=GoK'" alt="Government of Karnataka" class="h-11 w-11 md:h-14 md:w-14 rounded-full border border-white/20 object-contain bg-white/95 p-0.5">
-                        <div class="hidden md:block text-left">
-                            <p class="text-[9px] text-accent/80 font-semibold uppercase tracking-[0.2em] leading-none">In Association With</p>
-                            <p class="text-white text-sm font-bold leading-tight mt-0.5">Govt. of Karnataka</p>
-                        </div>
-                    </div>
-                    <div class="logo-divider hidden md:block"></div>
-                    <div class="flex items-center gap-3 shrink-0">
-                        <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/80x80/FFFFFF/4B0082?text=AIUC'" alt="Anglo Indian Unity Center" class="h-11 w-11 md:h-14 md:w-14 rounded-full border border-white/20 object-contain bg-white/95 p-0.5">
-                        <div class="hidden md:block text-left">
-                            <p class="text-[9px] text-accent/80 font-semibold uppercase tracking-[0.2em] leading-none">Presents</p>
-                            <p class="text-white text-sm font-bold leading-tight mt-0.5">Anglo Indian Unity Center</p>
-                        </div>
-                    </div>
-                    <div class="logo-divider hidden md:block"></div>
-                    <div class="flex items-center gap-3 shrink-0">
-                        <img src="ezinurse-logo.png" onerror="this.src='https://placehold.co/80x80/FFFFFF/4B0082?text=EziNurse'" alt="Ezi Nurse" class="h-11 w-11 md:h-14 md:w-14 rounded-full border border-white/20 object-contain bg-white/95 p-0.5">
-                        <div class="hidden md:block text-left">
-                            <p class="text-[9px] text-accent/80 font-semibold uppercase tracking-[0.2em] leading-none">Organized By</p>
-                            <p class="text-white text-sm font-bold leading-tight mt-0.5">Ezi Nurse</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ===== HERO CONTENT ===== -->
-        <div class="relative z-20 flex flex-col items-center justify-center text-center px-6 md:px-12 pt-12 md:pt-16 pb-20 md:pb-24 min-h-[580px] md:min-h-[560px]">
-            <div class="max-w-3xl mx-auto">
-                <div class="inline-flex items-center gap-2 px-5 py-2 border border-accent/40 rounded-full mb-6 animate-fade-in-up bg-accent/5">
-                    <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
-                    <span class="text-accent font-bold text-xs md:text-sm uppercase tracking-[0.3em]">Silver Jubilee Year</span>
-                    <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
-                </div>
-                <h1 class="font-display font-black tracking-tight leading-[1.2] mb-6 animate-fade-in-up delay-1">
-                    <span class="block text-5xl md:text-8xl text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">25<sup class="text-3xl md:text-5xl align-super">th</sup></span>
-                    <span class="block text-4xl md:text-7xl gold-shimmer mt-1">Florence Nightingale</span>
-                    <span class="block text-4xl md:text-6xl text-white/90 mt-1 font-bold">Awards — 2026</span>
-                </h1>
-                <p class="text-white/80 text-base md:text-xl font-normal max-w-xl mx-auto leading-relaxed mb-8 animate-fade-in-up delay-2">
-                    Honouring the extraordinary dedication of nurses and healthcare professionals who illuminate lives through compassion and service.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8 animate-fade-in-up delay-2">
-                    <div class="flex items-center gap-2 text-white/90">
-                        <i class="far fa-calendar-alt text-accent text-sm"></i>
-                        <span class="font-bold text-sm md:text-base tracking-wide">June 17, 2026</span>
-                    </div>
-                    <span class="hidden sm:inline text-white/30">|</span>
-                    <div class="flex items-center gap-2 text-white/90">
-                        <i class="fas fa-map-marker-alt text-accent text-sm"></i>
-                        <span class="font-bold text-sm md:text-base tracking-wide">Vidhana Soudha, Bangalore</span>
-                    </div>
-                </div>
-                <div class="flex flex-wrap justify-center gap-4 animate-fade-in-up delay-3">
-                    <a href="#register" class="px-8 py-3.5 bg-white text-primary font-bold text-sm uppercase tracking-wider rounded-lg hover:bg-gray-100 transition shadow-lg shadow-black/20 hover:shadow-black/30">
-                        Register Now
-                    </a>
-                    <a href="#about" class="px-8 py-3.5 border border-white/30 text-white/90 font-semibold text-sm uppercase tracking-wider rounded-lg hover:bg-white/10 hover:border-white/50 transition">
-                        Learn More
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-warmWhite to-transparent z-10"></div>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <div class="error-title">Resource Not Found</div>
+        
+        <div class="divider"></div>
+        
+        <p class="error-message">
+            We apologize for the inconvenience, but the page you are looking for does not exist in or on this domain. It may have been removed, renamed, or you may have followed an outdated link.
+        </p>
+        
+        <a href="/" class="home-button">Return to Homepage</a>
     </div>
 
-    <!-- ===== NAV ===== -->
-    <nav class="bg-primary sticky top-0 z-50 shadow-xl border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-14">
-                <div class="hidden md:flex justify-center w-full">
-                    <div class="flex items-baseline space-x-1">
-                        <a href="#home" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Home</a>
-                        <a href="#about" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">About</a>
-                        <a href="#schedule" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Schedule</a>
-                        <a href="#speakers" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Speakers</a>
-                        <a href="#reels" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Reels</a>
-                        <a href="#register" class="bg-accent text-primary hover:bg-accentHover px-5 py-2 rounded-md text-sm font-bold transition uppercase tracking-wide shadow-md ml-2">Register</a>
-                        <a href="#contact" class="text-white hover:bg-white/15 hover:text-accent px-4 py-2 rounded-md text-sm font-semibold transition uppercase tracking-wide">Contact</a>
-                    </div>
-                </div>
-                <div class="md:hidden flex items-center justify-between w-full">
-                    <a href="#home" class="text-white font-display font-bold text-lg tracking-wide">FN Awards '26</a>
-                    <button id="mobile-menu-btn" class="text-white hover:text-accent focus:outline-none p-2 rounded hover:bg-white/10 transition">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-primaryDark border-t border-white/10 shadow-lg absolute w-full left-0 top-14">
-            <div class="px-4 pt-4 pb-6 space-y-2 flex flex-col">
-                <a href="#home" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">Home</a>
-                <a href="#about" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">About</a>
-                <a href="#schedule" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">Schedule</a>
-                <a href="#speakers" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">Speakers</a>
-                <a href="#reels" onclick="toggleMenu()" class="text-white hover:text-accent py-3 border-b border-white/10 text-sm font-semibold uppercase tracking-wide">Reels</a>
-                <a href="#register" onclick="toggleMenu()" class="text-accent font-bold py-3 border-b border-white/10 text-sm uppercase tracking-wide">Register</a>
-                <a href="#contact" onclick="toggleMenu()" class="text-white hover:text-accent py-3 text-sm font-semibold uppercase tracking-wide">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ===== TITLE STRIP ===== -->
-    <section class="bg-white py-8 border-b border-gray-200">
-        <div class="max-w-5xl mx-auto text-center px-4">
-            <p class="text-sm font-bold text-primary uppercase tracking-[0.3em] mb-2">✦ Silver Jubilee Year ✦</p>
-            <h2 class="text-3xl md:text-5xl font-display font-bold text-primary mb-4 leading-tight">
-                25<sup>th</sup> Florence Nightingale Awards
-            </h2>
-            <p class="text-lg md:text-2xl font-light text-gray-600 mb-6 border-b-2 border-accent inline-block pb-4 max-w-3xl leading-relaxed">
-                Celebrating <strong>Excellence in Nursing &amp; Healthcare</strong> — Compassion, Courage, and Commitment
-            </p>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-10 text-gray-700 font-medium text-lg">
-                <div class="flex items-center">
-                    <i class="fas fa-map-marker-alt text-primary mr-2 text-xl"></i>
-                    Vidhana Soudha, Bangalore
-                </div>
-                <div class="flex items-center">
-                    <i class="fas fa-calendar-alt text-primary mr-2 text-xl"></i>
-                    June 17, 2026
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== MAIN CONTENT ===== -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
-
-        <!-- ORGANIZERS -->
-        <section id="organizers">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-primary mb-4 font-display">Our Organizers &amp; Partners</h2>
-                <div class="w-24 h-1 bg-accent mx-auto rounded"></div>
-            </div>
-            <div class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div class="bg-white rounded-xl shadow-lg border-t-4 border-primary p-6 card-hover flex flex-col items-center text-center">
-                    <div class="h-20 flex items-center justify-center mb-4"><img src="govt-karnataka-logo.png" onerror="this.src='https://placehold.co/100x100/F5F3FF/4B0082?text=GoK'" class="h-16 w-auto object-contain"></div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Government of Karnataka</h3>
-                    <p class="text-xs text-primary font-semibold uppercase tracking-wider">In Association</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border-t-4 border-accent p-6 card-hover flex flex-col items-center text-center">
-                    <div class="h-20 flex items-center justify-center mb-4"><img src="aiuc-logo.png" onerror="this.src='https://placehold.co/100x100/F5F3FF/4B0082?text=AIUC'" class="h-16 w-auto object-contain"></div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Anglo Indian Unity Center</h3>
-                    <p class="text-xs text-primary font-semibold uppercase tracking-wider">Presents</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg border-t-4 border-primary p-6 card-hover flex flex-col items-center text-center">
-                    <div class="h-20 flex items-center justify-center mb-4"><img src="ezinurse-logo.png" onerror="this.src='https://placehold.co/100x100/F5F3FF/4B0082?text=EziNurse'" class="h-16 w-auto object-contain"></div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-1">Ezi Nurse</h3>
-                    <p class="text-xs text-primary font-semibold uppercase tracking-wider">Organizer</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section id="about" class="max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-primary mb-6 font-display text-center">About the Awards</h2>
-            <div class="bg-white rounded-2xl shadow-md p-8 border border-purple-100 flex flex-col md:flex-row items-center gap-8">
-                <div class="flex-1">
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4 indent-8">The Florence Nightingale Awards is India's most prestigious recognition for exceptional nurses and healthcare professionals. Now in its 25th year, this landmark ceremony celebrates individuals who embody the spirit of Florence Nightingale — the pioneer of modern nursing — through their selfless dedication, clinical excellence, and compassionate service.</p>
-                    <p class="text-lg text-gray-700 leading-relaxed indent-8">This ceremony brings together healthcare leaders, policymakers, and the nursing community to honor those who have gone above and beyond in their commitment to patient care and public health — celebrating the enduring legacy of Florence Nightingale, the pioneer of modern nursing.</p>
-                </div>
-                <div class="shrink-0 w-full md:w-64 lg:w-72">
-                    <img src="momento.png" alt="Florence Nightingale Awards Momento" class="w-full h-auto rounded-xl shadow-lg object-contain">
-                </div>
-            </div>
-        </section>
-
-        <!-- SCHEDULE -->
-        <section id="schedule" class="py-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold text-primary mb-4 font-display">Ceremony Schedule</h2>
-                    <p class="text-gray-600">June 17, 2026 — Vidhana Soudha, Bangalore</p>
-                    <div class="w-24 h-1 bg-accent mx-auto rounded mt-4"></div>
-                </div>
-                <div class="bg-white rounded-2xl shadow-lg border border-purple-100 overflow-hidden">
-                    <div class="bg-primary px-6 py-4 flex justify-between items-center flex-wrap gap-2">
-                        <div>
-                            <span class="text-accent font-bold uppercase tracking-wider text-sm">Awards Day</span>
-                            <h3 class="text-xl font-bold text-white font-display">25th Florence Nightingale Awards Ceremony</h3>
-                        </div>
-                        <div class="flex items-center text-white bg-white/10 px-4 py-1.5 rounded-lg">
-                            <i class="far fa-calendar-alt mr-2 text-accent"></i>
-                            <span class="font-bold text-sm">June 17, 2026</span>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8 space-y-0 border-l-2 border-purple-100 ml-6 md:ml-10">
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">08:30 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Guest Registration &amp; Welcome Desk Opens</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">10:00 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Welcome Address</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">10:30 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Cultural Performances</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">11:00 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Arrival of the Chief Guests</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">11:10 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Inauguration Ceremony</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">11:20 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Ceremonial Lamp Lighting</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">11:25 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Felicitation of Judges</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">11:30 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Prize Distribution Ceremony</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">11:40 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Address by Distinguished Guests</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">11:50 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Souvenir Release Ceremony</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">11:55 AM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Awards Presentation</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-8"><span class="text-xs font-bold text-primary uppercase tracking-wider">12:05 PM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Chief Guest's Address</h4></div>
-                        <div class="relative timeline-dot pl-8 pb-4"><span class="text-xs font-bold text-primary uppercase tracking-wider">01:00 PM</span><h4 class="font-bold text-gray-800 text-lg mt-1">Vote of Thanks &amp; Closing Remarks</h4></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SPEAKERS -->
-        <section id="speakers" class="py-6">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 font-display">Distinguished Dignitaries</h2>
-                <div class="w-24 h-1 bg-accent mx-auto rounded"></div>
-                <p class="mt-4 text-gray-600">Esteemed leaders and supporters of the Florence Nightingale Awards.</p>
-            </div>
-            <div class="space-y-10 max-w-5xl mx-auto">
-
-                <!-- Shri G. Parameshwara — Deputy CM — FIRST -->
-                <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/3 min-h-[320px] md:min-h-[400px] bg-gray-200 relative overflow-hidden shrink-0"><img src="dcm.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=G.+Parameshwara'" alt="Shri G. Parameshwara" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
-                    <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
-                        <span class="px-3 py-1 bg-accent/20 text-primary text-xs font-bold uppercase tracking-wider rounded-full inline-block mb-3 w-fit">Hon'ble Deputy Chief Minister</span>
-                        <h3 class="text-2xl font-bold text-gray-800 font-display mb-1">Shri G. Parameshwara</h3>
-                        <p class="text-primary font-bold text-sm mb-1">Deputy Chief Minister of Karnataka</p>
-                        <p class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-4"></p>
-                        <div class="bg-warmWhite border-l-4 border-accent p-4 rounded-r-lg text-sm text-gray-700 leading-relaxed italic">
-                            <p class="font-bold text-primary not-italic mb-2 text-xs uppercase tracking-wider">Message</p>
-                            <p>I am delighted to learn that the Anglo-Indian Unity Centre, in collaboration with the Department of Health and Family Welfare, is commemorating the Florence Nightingale Awards 2026. Celebrating the silver jubilee of this prestigious initiative is a significant milestone, reflecting 25 years of honoring the dedication, compassion, and selfless service of nursing professionals who form the backbone of our healthcare system.</p>
-                            <p class="mt-2">I extend my heartfelt congratulations to all the awardees for their outstanding contributions and unwavering devotion to the noble profession of nursing. May the Silver Jubilee celebrations be a memorable success and continue to inspire future generations of caregivers.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Shri U.T. Khader — Minister for Health & Family Welfare -->
-                <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/3 min-h-[320px] md:min-h-[400px] bg-gray-200 relative overflow-hidden shrink-0"><img src="ut.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=U.T.+Khader'" alt="Shri U.T. Khader" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
-                    <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
-                        <span class="px-3 py-1 bg-accent/20 text-primary text-xs font-bold uppercase tracking-wider rounded-full inline-block mb-3 w-fit">The Hon'ble Minister for Health &amp; Family Welfare</span>
-                        <h3 class="text-2xl font-bold text-gray-800 font-display mb-1">Shri U.T. Khader</h3>
-                        <p class="text-primary font-bold text-sm mb-1">Minister for Health &amp; Family Welfare</p>
-                        <p class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-4">Government of Karnataka | MLA, Mangaluru</p>
-                        <div class="bg-warmWhite border-l-4 border-accent p-4 rounded-r-lg text-sm text-gray-700 leading-relaxed italic">
-                            <p class="font-bold text-primary not-italic mb-2 text-xs uppercase tracking-wider">Message</p>
-                            <p>I am extremely pleased to know that the Anglo-Indian Unity Centre, with the Department of Health and Family Welfare, is celebrating the Florence Nightingale Awards 2026. Reaching this silver jubilee is a remarkable feat that underscores 25 years of recognizing the silent heroes of our society. While doctors are the brain of a hospital, nurses are its very heart.</p>
-                            <p class="mt-2">I extend my warmest congratulations to all the award recipients for their exemplary dedication. Your service is the true embodiment of the spirit of Florence Nightingale. I wish the silver jubilee celebrations a grand success.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Chairman Ivan Nigli -->
-                <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/3 min-h-[320px] md:min-h-[400px] bg-gray-200 relative overflow-hidden shrink-0"><img src="ivan.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=Ivan+Nigli'" alt="Shri Ivan Nigli" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
-                    <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
-                        <span class="px-3 py-1 bg-accent/20 text-primary text-xs font-bold uppercase tracking-wider rounded-full inline-block mb-3 w-fit">The Hon'ble Chairman, Florence Nightingale Awards</span>
-                        <h3 class="text-2xl font-bold text-gray-800 font-display mb-1">Shri Ivan Nigli</h3>
-                        <p class="text-primary font-bold text-sm mb-1">Chairman, Florence Nightingale Awards</p>
-                        <p class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-4">Anglo Indian Unity Centre</p>
-                        <div class="bg-warmWhite border-l-4 border-accent p-4 rounded-r-lg text-sm text-gray-700 leading-relaxed italic">
-                            <p class="font-bold text-primary not-italic mb-2 text-xs uppercase tracking-wider">Message</p>
-                            <p>The Florence Nightingale Nurses' Award was instituted in the year 2000. We are proud to share that this year marks its 25th year — a significant Silver Jubilee milestone. We take immense pride in continuing this recognition of the invaluable contributions of the nursing community in the state of Karnataka. I would like to extend my heartfelt congratulations to all the winners of 2026.</p>
-                            <p class="mt-2">I would like to sincerely thank the Government of Karnataka for continuing to support this initiative. Heartiest congratulations to all the winners, and my sincere appreciation to the entire nursing fraternity for their dedication and service!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dr. Sharanprakash R. Patil -->
-                <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/3 min-h-[320px] md:min-h-[400px] bg-gray-200 relative overflow-hidden shrink-0"><img src="saran.png" onerror="this.src='https://placehold.co/400x500/E6E6FA/4B0082?text=Dr.+Patil'" alt="Dr. Sharanprakash R. Patil" class="absolute inset-0 w-full h-full object-cover dignitary-photo"></div>
-                    <div class="w-full md:w-2/3 p-6 md:p-8 flex flex-col justify-center">
-                        <span class="px-3 py-1 bg-accent/20 text-primary text-xs font-bold uppercase tracking-wider rounded-full inline-block mb-3 w-fit">The Hon'ble Minister for Medical Education &amp; Skill Development</span>
-                        <h3 class="text-2xl font-bold text-gray-800 font-display mb-1">Shri Dr. Sharanprakash R. Patil</h3>
-                        <p class="text-primary font-bold text-sm mb-1">Minister for Medical Education &amp; Skill Development</p>
-                        <p class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-4">Government of Karnataka | MLA, Sedam</p>
-                        <div class="bg-warmWhite border-l-4 border-accent p-4 rounded-r-lg text-sm text-gray-700 leading-relaxed italic">
-                            <p class="font-bold text-primary not-italic mb-2 text-xs uppercase tracking-wider">Message</p>
-                            <p>I am very much pleased to note that the Anglo Indian Unity Centre in association with the Department of Health and Family Welfare is organizing a State Level award for deserving nurses in Karnataka.</p>
-                            <p class="mt-2">I am very happy to know that Anglo-Indian Unity Centre is celebrating this event on the occasion of the celebration of Birth Anniversary of Florence Nightingale who has been a source of inspiration to millions of people.</p>
-                            <p class="mt-2">I further hope that the 'souvenir' which you are about to release will consist of articles related to medical and philanthropic issues written by Doctors and Eminent writers. I wish you all the best for the event.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <hr class="border-gray-200">
-
-        <!-- PREVIOUS YEARS GALLERY -->
-        <section id="gallery" class="py-6">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 font-display">Moments from Previous Years</h2>
-                <div class="w-24 h-1 bg-accent mx-auto rounded"></div>
-                <p class="mt-4 text-gray-600">A glimpse into 24 years of honouring nursing excellence.</p>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1guLFyVwhWUeRqc3ZahnL9Z9J1hfkUmPW" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1djUAhMIODFfAiw_Wst0ZvtG03LNqKagQ" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1gM8j3w6DlVgYTv3-r4C33BQdt1nZqijz" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1G4EPBQ3Kc5MNLslcwADT2mmafC7By9ru" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/12sYKDHLFOHJpgB1tcaUATy9VbjOCunxS" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1froNvxnpx01HVUc6Wn5Ucve5CIP77C79" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/11fn0MEsyBr9x3G-QtQp50wgT2OuLlcsR" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1dZFlkfbJ7RTNDI8DlxDJh-xBHJDLjuuS" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1Vq4iJexb8F43ReU6vAfO58Oz08uQeuEM" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/10PhCR43V5FZPUqRfAXT_Ywm7mbkoMw59" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1fCdOfXzFM10_FIEz313rOXPt4bahWw2q" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/19duLFOzSlyJWsvcHPgQtD6JhXaDNXwBb" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1qwwbwiitvtHJP4nTaWFU3Fk3QQDKtlqW" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1B6YRDQ6J0aKusburM_ZcpXvZfCiGA6N7" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/161ZPBi6nRPsA_cpk8aNA3h5EPP1qv7QC" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1hsodiQ64NRuaHxrQ14Dvc7NgeLNNquC3" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/13ix2_CCMLiwnVIBIKoG3cN48iViKYEvj" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1Whx8J_kpk1axNs2CHv1zNbBq3OeUPQ7A" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1KIWQ1URWnsK8qTrLt_pIizk7Voa0GXnJ" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1TdZWxLpqr-hNe1MwwIf7byB_C60GDJjE" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1EQ_WzCAW3YkkkxDbYzJKCYbaOrX5EgxG" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1k95l-ekwICJz09DVf7zWei6bhLl76o1X" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1KjnO75m_BdENyvB4D4e9R8NAz3atrnI2" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/10w3sSbccbI7n2RlaeEKHVQkVTdKsHADL" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-                <div class="group relative rounded-xl overflow-hidden shadow-md aspect-[4/3]"><img src="https://lh3.googleusercontent.com/d/1KYOAbJwfqoxUGUF5mZR8pEsormtpXcaT" alt="FN Awards" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy"></div>
-            </div>
-        </section>
-
-        <hr class="border-gray-200">
-
-        <!-- REGISTRATION -->
-        <section id="register" class="mb-8">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-primary mb-4 font-display">Registration</h2>
-                <div class="w-24 h-1 bg-accent mx-auto rounded mb-4"></div>
-                <div class="bg-green-50 border border-green-200 text-green-800 px-6 py-4 rounded-lg inline-block max-w-3xl text-sm leading-relaxed">
-                    <strong><i class="fas fa-check-circle mr-2"></i>Registration Includes:</strong> Access to the full ceremony, lunch, refreshments, and certificate of participation.
-                </div>
-            </div>
-            <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-xl border-t-4 border-primary text-center">
-                <div class="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-ticket-alt text-3xl text-primary"></i></div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-2 font-display">Register for the Ceremony</h3>
-                <p class="text-gray-500 text-sm mb-6">Secure your spot at the 25th Florence Nightingale Awards Ceremony.</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbgVXOWIrjyetumCm995DAEDgF_tq4k-ixnpjhs5ROsRuYbA/viewform" target="_blank" class="block w-full py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-purple-900 transition shadow-lg transform hover:-translate-y-1"><span>Register Now</span> <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ===== REELS SECTION ===== -->
-    <section id="reels" class="bg-white py-14 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="text-center mb-10">
-                <div class="flex items-center justify-center gap-3 mb-4">
-                    <div class="reels-header-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary font-display">Reels</h2>
-                </div>
-                <div class="w-24 h-1 bg-accent mx-auto rounded"></div>
-                <p class="mt-4 text-gray-600 max-w-lg mx-auto">Watch highlights, behind-the-scenes moments, and stories from the Florence Nightingale Awards.</p>
-            </div>
-
-            <div class="reels-grid">
-
-                <!-- Reel 1 -->
-                <div class="reel-card">
-                    <div class="reel-thumbnail-wrap" data-video-id="YOUR_VIDEO_ID_UT_KHADER" onclick="playReel(this)">
-                        <img src="reel1.png" alt="Shri U.T. Khader" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
-                        <div class="reel-play-overlay" style="opacity:1;">
-                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="reel-badge">
-                            <i class="fas fa-film"></i>
-                            <span>Reel</span>
-                        </div>
-                    </div>
-                    <div class="reel-caption">
-                        <div class="reel-handle">
-                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
-                            <span>FN Awards</span>
-                        </div>
-                        <p>Shri U.T. Khader, Hon'ble Minister for Health &amp; Family Welfare, shares his thoughts on the Florence Nightingale Awards.</p>
-                    </div>
-                </div>
-
-                <!-- Reel 2 -->
-                <div class="reel-card">
-                    <div class="reel-thumbnail-wrap" data-video-id="hYosluwpcd8" onclick="playReel(this)">
-                        <img src="reel2.png" alt="Message by Dr. Bhagavan B.C" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
-                        <div class="reel-play-overlay" style="opacity:1;">
-                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="reel-badge">
-                            <i class="fas fa-film"></i>
-                            <span>Reel</span>
-                        </div>
-                    </div>
-                    <div class="reel-caption">
-                        <div class="reel-handle">
-                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
-                            <span>FN Awards</span>
-                        </div>
-                        <p>Dr. Bhagavan B.C, Vice-Chancellor of RGUHS, shares his thoughts and wishes on the occasion of International Nurses Day and the Florence Nightingale Awards 2025.</p>
-                    </div>
-                </div>
-
-                <!-- Reel 3 -->
-                <div class="reel-card">
-                    <div class="reel-thumbnail-wrap" data-video-id="hDD5oosIIhk" onclick="playReel(this)">
-                        <img src="reel3.png" alt="Shri P.G.R. Sindhia" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
-                        <div class="reel-play-overlay" style="opacity:1;">
-                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="reel-badge">
-                            <i class="fas fa-film"></i>
-                            <span>Reel</span>
-                        </div>
-                    </div>
-                    <div class="reel-caption">
-                        <div class="reel-handle">
-                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
-                            <span>FN Awards</span>
-                        </div>
-                        <p>Shri P.G.R. Sindhia, Former Cabinet Minister of Karnataka & State Chief Commissioner of Bharat Scouts and Guides, shares his message for the Florence Nightingale Awards.</p>
-                    </div>
-                </div>
-
-                <!-- Reel 4 — Dinesh Gundu Rao -->
-                <div class="reel-card">
-                    <div class="reel-thumbnail-wrap" data-video-id="QGNaHG0-X64" onclick="playReel(this)">
-                        <img src="reel1.png" alt="Shri Dinesh Gundu Rao" class="reel-thumb-img absolute inset-0 w-full h-full object-cover">
-                        <div class="reel-play-overlay" style="opacity:1;">
-                            <div class="reel-play-btn"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="reel-badge">
-                            <i class="fas fa-film"></i>
-                            <span>Reel</span>
-                        </div>
-                    </div>
-                    <div class="reel-caption">
-                        <div class="reel-handle">
-                            <img src="aiuc-logo.png" onerror="this.src='https://placehold.co/40x40/E6E6FA/4B0082?text=FN'" alt="">
-                            <span>FN Awards</span>
-                        </div>
-                        <p>Shri Dinesh Gundu Rao, Former Minister for Health &amp; Family Welfare, shares his thoughts on the Florence Nightingale Awards on International Nurses Day.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer id="contact" class="bg-primary text-white py-12 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8 mb-8 border-b border-purple-800 pb-8">
-                <div>
-                    <h4 class="text-xl font-bold text-accent mb-4 font-display">Contact Us</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start"><i class="fas fa-user-tie mt-1 mr-3 text-purple-300"></i><span class="text-purple-100"><strong class="text-white block mb-1">Event Director</strong>Mrs. Asha Prince</span></li>
-                        <li class="flex items-center"><i class="fab fa-whatsapp mr-3 text-purple-300 text-lg"></i><a href="https://wa.me/919739722129" target="_blank" class="text-purple-100 hover:text-white transition">+91 97397 22129</a></li>
-                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-purple-300"></i><a href="mailto:ashaprince2001@gmail.com" class="text-purple-100 hover:text-white transition">ashaprince2001@gmail.com</a></li>
-                        <li class="border-t border-purple-800 pt-4 mt-4"></li>
-                        <li class="flex items-start"><i class="fas fa-user-tie mt-1 mr-3 text-purple-300"></i><span class="text-purple-100"><strong class="text-white block mb-1">Event Coordinator</strong>Mrs. Sini George<br>Chief of Operations, Ezi Nurse</span></li>
-                        <li class="flex items-center"><i class="fab fa-whatsapp mr-3 text-purple-300 text-lg"></i><a href="https://wa.me/917829444447" target="_blank" class="text-purple-100 hover:text-white transition">+91 78294 44447</a></li>
-                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-purple-300"></i><a href="mailto:sini@florencenightingaleawards.com" class="text-purple-100 hover:text-white transition">sini@florencenightingaleawards.com</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-accent mb-4 font-display">Venue</h4>
-                    <div class="bg-purple-900/50 p-5 rounded-lg">
-                        <p class="text-white font-semibold text-lg font-display">Vidhana Soudha</p>
-                        <p class="text-purple-200 text-sm mt-2">Dr. Ambedkar Veedhi,<br>Sampangi Rama Nagara,<br>Bangalore – 560001,<br>Karnataka, India</p>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-accent mb-4 font-display">Quick Links</h4>
-                    <ul class="space-y-2 text-purple-200">
-                        <li><a href="#home" class="hover:text-white hover:underline">Home</a></li>
-                        <li><a href="#about" class="hover:text-white hover:underline">About the Awards</a></li>
-                        <li><a href="#schedule" class="hover:text-white hover:underline">Ceremony Schedule</a></li>
-                        <li><a href="#reels" class="hover:text-white hover:underline">Reels</a></li>
-                        <li><a href="#register" class="hover:text-white hover:underline">Register</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center pt-4 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-sm text-purple-300">© 2026 25th Florence Nightingale Awards. All rights reserved.</p>
-                <div class="mt-4 md:mt-0 flex gap-4">
-                    <a href="#" class="text-purple-300 hover:text-white"><i class="fab fa-facebook fa-lg"></i></a>
-                    <a href="#" class="text-purple-300 hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
-                    <a href="#" class="text-purple-300 hover:text-white"><i class="fab fa-twitter fa-lg"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMenu);
-
-        let activeReel = null;
-
-        function playReel(container) {
-            const videoId = container.getAttribute('data-video-id');
-            if (!videoId || videoId.startsWith('YOUR_VIDEO_ID')) {
-                return;
-            }
-
-            if (activeReel === container) {
-                stopReel(container);
-                activeReel = null;
-                return;
-            }
-
-            if (activeReel) {
-                stopReel(activeReel);
-            }
-
-            const thumb = container.querySelector('.reel-thumb-img');
-            const overlay = container.querySelector('.reel-play-overlay');
-            const badge = container.querySelector('.reel-badge');
-            if (thumb) thumb.style.display = 'none';
-            if (overlay) overlay.style.display = 'none';
-            if (badge) badge.style.display = 'none';
-
-            const iframe = document.createElement('iframe');
-            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&loop=1&playlist=' + videoId + '&rel=0&modestbranding=1&playsinline=1';
-            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-            iframe.setAttribute('allowfullscreen', '');
-            iframe.className = 'reel-iframe';
-            iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;z-index:5;';
-            container.appendChild(iframe);
-
-            container.removeAttribute('onclick');
-
-            const closeBtn = document.createElement('button');
-            closeBtn.innerHTML = '<i class="fas fa-times"></i>';
-            closeBtn.className = 'reel-close-btn';
-            closeBtn.style.cssText = 'position:absolute;top:8px;right:8px;z-index:10;width:32px;height:32px;border-radius:50%;background:rgba(0,0,0,0.6);color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;backdrop-filter:blur(4px);transition:background 0.2s;';
-            closeBtn.onmouseenter = function(){ this.style.background='rgba(0,0,0,0.85)'; };
-            closeBtn.onmouseleave = function(){ this.style.background='rgba(0,0,0,0.6)'; };
-            closeBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                stopReel(container);
-                activeReel = null;
-            });
-            container.appendChild(closeBtn);
-
-            activeReel = container;
-        }
-
-        function stopReel(container) {
-            const iframe = container.querySelector('.reel-iframe');
-            if (iframe) iframe.remove();
-
-            const closeBtn = container.querySelector('.reel-close-btn');
-            if (closeBtn) closeBtn.remove();
-
-            const thumb = container.querySelector('.reel-thumb-img');
-            const overlay = container.querySelector('.reel-play-overlay');
-            const badge = container.querySelector('.reel-badge');
-            if (thumb) thumb.style.display = '';
-            if (overlay) overlay.style.display = '';
-            if (badge) badge.style.display = '';
-
-            container.setAttribute('onclick', 'playReel(this)');
-        }
-    </script>
 </body>
 </html>
